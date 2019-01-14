@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style media="screen">
+  .box{
+    width:400px;
+    height:500px;
+    background:#ddd;
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    margin:auto;
+    padding:20px;
+  }
+  .form-control{
+    height:40px;
+
+  }
+  .btn-primary{
+    background:#FF4400;
+    border-color:#FF4400;
+  }
+  .gray{
+    background:#ededed;
+  }
+  
+</style>
+<body style="background:black">
+<div class="container">
+<div class="row">
+      <div class="box">
+        <form>
+  <div class="form-group">
+    <h4 style="padding:30px 10px"><b>密码登录<b></h4>
+      <div class="form-group">
+    <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+    <div class="input-group">
+      <div class="input-group-addon gray"><i class="glyphicon glyphicon-user"></i></div>
+      <input type="text" class="form-control" id="exampleInputAmount" placeholder="会员名/邮箱/手机号"  style="border-right:none;">
+      <div class="input-group-addon" style="background:white;"><i class="glyphicon glyphicon-remove-circle"></i></div>
+
+    </div>
+    <div class="form-group" style="margin-top:30px">
+  <label class="sr-only" for="exampleInputAmount">Amount (in dollars)</label>
+  <div class="input-group">
+    <div class="input-group-addon gray"><i class="glyphicon glyphicon-user"></i></div>
+    <input type="text" class="form-control" id="exampleInputAmount" placeholder="密码" style="border-right:none;">
+    <div class="input-group-addon"><i class="glyphicon glyphicon-remove-circle" style="background:white;" ></i></div>
+  </div>
+    <button type="submit" class="btn btn-primary form-control" style="margin-top:20px;" >登录</button>
+
+
+  </div>
+  </div>
+  <ul class="list-unstyled" style="background:white; display:inline-block;">
+    <i class="glyphicon glyphicon-globe"></i>
+    <span>微博登录</span>
+
+
+    <i class="glyphicon glyphicon-globe" style="margin-left:20px;"></i>
+    <span>微博登录</span>
+  </ul>
+  <br>
+  <br>
+  <ul class="list-unstyled" style="background:white; display:inline-block; margin-left:105px; ">
+    <span style="padding:0 5px;">微博登录</span>
+    <span style="padding:0 5px;">微博登录</span>
+    <span style="padding:0 5px;">微博登录</span>
+  </ul>
+</form>
+      </div>
+</div>
+</div>
+</body>
+</html>

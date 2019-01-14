@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.box{
+			width: 400px;
+			height: 500px;
+			border: 1px solid black;
+			margin:20px auto;
+		}
+		input
+		{
+			width: 200px;
+			height: 50px;
+			margin: 10px 20px;
+			font-size: 18px;
+		}
+		button{
+			width: 100px;
+			height:  40px;
+			margin-left:50px;
+		}
+		span{
+			color: green;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+	<input type="text" name="" placeholder="请输入用户名"><span></span><br>
+	<input type="password" name="" placeholder="请输入密码"><span></span><br>
+	<input type="password" name="" placeholder="确认密码"><span></span><br>
+	<input type="text" name="" placeholder="请输入邮箱"><span></span><br>
+	<button>登录</button>
+</div>
+</body>
+<script type="text/javascript">
+	var Span=document.querySelectorAll("span");
+	var Btn=document.querySelector("button");
+	
+	var reg1=/^[a-z]\w{7,11}$/;
+	var reg2=/^[a-z]\d{6,8}$/;
+	
+	var reg4=/\w+@([a-z]|\d)+\.com$/;
+	var str="";
+	var atr="0";
+	var inp=document.querySelectorAll("input");
+	function fn(i,e){
+		var a=i;
+		str=inp[a].value;
+	if (e.test(str)) {
+		Span[a].style.color="green";
+		Span[a].innerHTML="输入正确"
+
+	}
+	else{
+		Span[a].style.color="red";
+		Span[a].innerHTML="输入不合法"
+		inp[a].value="";
+
+	}
+	console.log(str);
+	
+	}
+
+	
+	inp[0].onblur=function(){
+			fn(0,reg1);
+			if(inp[0].value=="")
+			{
+				Span[0].style.color="red";
+				Span[0].innerHTML="输入为空"
+				
+			}
+		}
+	inp[1].onblur=function(){
+			fn(1,reg2)
+			atr=str;
+			if(inp[1].value=="")
+			{
+				Span[1].style.color="red";
+				Span[1].innerHTML="输入为空"
+				
+			}
+		}
+	inp[2].onblur=function(){
+			fn(2,reg2)
+			if(inp[2].value=="")
+			{
+				Span[2].style.color="red";
+				Span[2].innerHTML="输入为空"
+			
+			}
+			
+			else if(str==atr){
+				Span[2].style.color="green";
+				Span[2].innerHTML="密码一致"
+			}
+			else{
+				Span[2].style.color="red";
+				Span[2].innerHTML="密码与上次输入不一致"
+				inp[2].value="";
+
+			}
+		}
+	inp[3].onblur=function(){
+			fn(3,reg4)
+			if(inp[3].value=="")
+			{
+				Span[3].style.color="red";
+				Span[3].innerHTML="输入为空"
+				
+			}
+		}
+
+	
+	Btn.onclick=function(){
+		
+	for(let j=0;j<4;j++)
+	{
+		if(inp[j].value!=""){
+			alert("已登录！")
+			break;
+
+		}
+		else{
+			inp[j].focus();
+			Span[j].style.color="red";
+			Span[j].innerHTML="输入为空";
+		}
+	}
+	}
+</script>
+</html>

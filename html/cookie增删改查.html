@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	var d = new Date();
+
+	//设置普通cookie
+
+	document.cookie="xiaoming=18";
+	document.cookie="xiaoqiang=30";
+	document.cookie="xiaohong=30";
+	document.cookie="xiaohong=30;"+"path=/";
+	document.cookie="xiaohong=30;"+"path=/;"+"expires="+d.toGMTString(d.setTime(d.getTime()+1000000));
+	//删除小明
+	document.cookie="xiaoming=18;"+"expires="+d.toGMTString(d.setTime(d.getTime()-1000));
+	document.cookie="xiaohong=17"
+	document.cookie="xiaohong=20;"+"path=/;"+"expires="+d.toGMTString(d.setTime(d.getTime()+100000000));
+	console.log(document.cookie);
+	var str=document.cookie;
+	var atr=str.split(";");
+
+	console.log(atr[1]);
+</script>
+</html>

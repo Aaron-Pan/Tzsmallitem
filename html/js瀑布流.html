@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.container{
+			width: 1200px;
+			height: auto;
+			margin: 0 auto;
+			background: #eee;
+			/*overflow:hidden;*/
+			position: relative;
+		}
+		.box{
+			padding: 14px;
+			float: left;
+		}
+		.imgBox{
+			padding: 10px;
+			border:1px solid gray;
+			border-radius: 10px;
+			box-shadow: 0 0 10px 3px gray;
+
+		}
+		.imgBox img{
+			width: 250px;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="box">
+			<div class="imgBox"><img src="../img/aa.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/kk.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/cc.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/mm.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/aa.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/ll.jpg" alt=""></div>
+		</div>
+		 <div class="box">
+			<div class="imgBox"><img src="../img/mm.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/dd.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/ee.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/ll.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/mm.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/aa.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/kk.jpg" alt=""></div>
+		</div>
+		<div class="box">
+			<div class="imgBox"><img src="../img/aa.jpg" alt=""></div>
+		</div> 
+	</div>
+	
+</body>
+<script type="text/javascript">
+window.onload = function(){
+	var arr = document.getElementsByClassName("box");
+	// 求出每行能放多少个图片
+	// 1,获取容器宽度
+	var container = document.querySelector(".container").offsetWidth;
+	// 2，获取单个图片宽度
+	var imgWidth = arr[0].offsetWidth;
+	// 3,求能存放的个数
+	var count = parseInt(container/imgWidth);
+
+	// console.log(count)
+
+	// 创建记录高度的数组
+	var arrHeight = [];
+	for( var i = 0 ; i < arr.length ; i++  ){
+		if( i < count ){
+			// 记录第一排的高度
+			arrHeight[i] = arr[i].offsetHeight;
+		}else{
+			// 从第二排开始寻找最矮得列增加图片
+			var minHeight = Math.min.apply(null,arrHeight);
+			// 找到最矮列的下标 minIndex
+			var minIndex;
+			for( var j = 0 ; j < arrHeight.length ; j++ ){
+				if( arrHeight[j] == minHeight ){
+					minIndex = j;
+				}
+			}
+
+			// 将当前图片插入至最小高度的位置
+			arr[i].style.position = "absolute";
+			arr[i].style.left = arr[i].offsetWidth*minIndex + "px";
+			arr[i].style.top = minHeight + "px";
+
+			// console.log(minIndex)
+			// 更新高度数组
+			arrHeight[minIndex] += arr[i].offsetHeight
+
+		}
+	}
+	console.log(arrHeight)
+}
+</script>
+</html>

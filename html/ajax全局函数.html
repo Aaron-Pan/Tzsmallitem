@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		
+	</style>
+</head>
+<body>
+	<ul class="item">
+		<li class="item1">111</li>
+		<li class="item2">222</li>
+		<li class="item3">333
+			<span class="one">sp111</span>
+			<span class="two">sp222</span>
+			<span class="three">sp333</span>
+		</li>
+		<li class="item4">444</li>
+		<li class="item5">555</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	$(function(){
+
+		console.log($(".one").parent());
+		console.log($(".one").parents());
+		console.log($(".one").parentsUntil("html"));
+		console.log($(".item1").nextUntil(".item5"));
+		console.log($(".item1").siblings());
+		console.log($("li").eq(0));
+		$(".item1").attr({
+			"id":"box1",
+			"title":"今天天气真好"
+		})
+		$(".item5").addClass("box5");
+		$(".item5").removeClass("item5");
+		// $("body").append("<p>我是P</p>")
+		var a=$("<p>我是P</p>");
+		$("body").append(a);
+		console.log($(".item4").index())
+
+	})
+</script>
+</html>

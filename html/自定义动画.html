@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		img{
+			width: 300px;
+			height: 250px;
+		}
+		.box{
+			width: 200px;
+			height: 200px;
+			border: 1px solid black;
+		}
+		button{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<button type="">点我变圆</button>
+	<img src="../img/ee.jpg">
+	<div class="box"></div>
+</body>
+<script type="text/javascript">
+	$(function(){
+	$("button").click(function(){
+// 	$("img").animate({
+// 	"width":"100px",
+// 	"height":"80px",
+
+// },1000,function(){
+// 	$("img").animate({
+// 		"width":"300px",
+// 		"height":"250px"
+// 	},1000)
+// })
+
+// $("img").css({
+//  "width":"100px",
+//  "height":"80px",
+//  "transition":"all 1s"
+// })
+
+
+// $("img").animate({
+// 	"width":"100px",
+//  	"height":"80px",
+// },1000)
+// $(".box").animate({
+// 	"width":"400px",
+//  	"height":"400px",
+// },1000)
+
+$("img").delay(1000).toggle(2000);
+})
+
+
+
+})
+
+</script>
+
+</html>

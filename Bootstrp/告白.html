@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<HTML>
+ <HEAD>
+  <TITLE> New Document </TITLE>
+  <META NAME="Generator" CONTENT="EditPlus">
+  <META NAME="Author" CONTENT="">
+  <META NAME="Keywords" CONTENT="">
+  <META NAME="Description" CONTENT="">
+  <style>
+  @import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+* {
+  margin: 0;
+  padding: 0;
+}
+canvas {
+  display: block;
+}
+#canv{
+	z-index:999;
+}
+  </style>
+ </HEAD>
+ <BODY>
+<canvas id="canv"></canvas>
+<script>
+window.onload = function() {
+  var canvas = document.getElementById("canv");
+  var ctx = canvas.getContext("2d");
+  //�漴��ɫ
+  function randomColor() {
+    return '#' + Math.random().toString(16).slice(2, 8);
+  }
+  //��������
+  function randomWord() {
+  var word = words[Math.floor(Math.random() * words.length)];
+  return word;
+}
+//����������С
+  function randomInt(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+  //��ʼ������Ļ
+  var W = window.innerWidth,
+    H = window.innerHeight;
+  canvas.width = W;
+  canvas.height = H;
+  var particles = [];
+  var mouse = {};
+  //Lets create some particles now
+  var particle_count =50;
+  for (var i = 0; i < particle_count; i++) {
+    particles.push(new particle());
+  }
+  canvas.addEventListener('mousedown', track_mouse, false);
+  //�жϵ�ǰ������λ��
+  function track_mouse(e) {
+    mouse.x = e.pageX;
+    mouse.y = e.pageY;
+
+    for (var i = 0; i < particle_count; i++) {
+      particles.push(new particle());
+    }
+  }
+
+  function particle() {
+    this.speed = {
+      x: -2.5 + Math.random() * 5,
+      y: -2.5 + Math.random() * 5
+    };
+    if (mouse.x && mouse.y) {
+      this.location = {
+        x: mouse.x,
+        y: mouse.y
+      };
+    } else {
+      this.location = {
+        x: W / 2,
+        y: H / 2
+      };
+    }
+    this.color = randomColor()
+
+    this.font = {
+      size: randomInt(3, 8)
+    }
+    this.word = randomWord()
+  }
+  //����Щ��Ч�ڻ�����ʵ��
+  function draw() {
+    ctx.globalCompositeOperation = "source-over";
+
+    ctx.fillStyle = 'black';
+    ctx.fillRect(0,0, W, H);
+    ctx.globalCompositeOperation = "lighter";
+    for (var i = 0; i < particles.length; i++) {
+      var p = particles[i];
+
+      ctx.font = p.font.size + "vh Luckiest Guy"; //������ʽ��������С
+      ctx.textAlign = "center";//���굱ǰ����
+      ctx.transition = "all 2s ease";
+      ctx.fillStyle = p.color;//��������ɫ
+      ctx.fillText(p.word, p.location.x, p.location.y);//������λ���Լ���ʽ
+
+
+      p.location.x += p.speed.x;
+      p.location.y += p.speed.y;
+
+      p.speed.x += randomInt(-0.01, 0.01);
+      p.speed.y += randomInt(-0.01, 0.01);
+    }
+  }
+  setInterval(draw, 20);  //��ʱ��
+};
+//��Ļ����
+words = ["�����ҵ����ݿ�Ψһ������", "��֪�����ͺ��ӵ������� ", "����~", "ϲ����", "������������", "forever", "��һ��", "520����һ����˼","�����ҵ�ȫ����","���ţ���������","Love","���˺���","������Զ��һ��","��ϲ����","�ÿɰ���Ů����"];
+</script>
+ </BODY>
+</HTML>

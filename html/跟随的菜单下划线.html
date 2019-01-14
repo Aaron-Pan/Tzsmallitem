@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		ul{
+			width: 802px;
+			height: 50px;
+			list-style: none;
+			margin: 100px auto;
+			display: flex;
+			justify-content: flex-start;
+			position: relative;
+			border: 1px solid black;
+		}
+		li{
+			width: 100px;
+			height: 50px;
+			font-size: 20px;
+			text-align: center;
+			line-height: 50px;
+			cursor: pointer;
+		}
+		li:hover{
+			background: skyblue;
+			color: white;
+		}
+		/*ul li.active{
+			border-radius: 50%;
+			background: red;
+			color: white;
+			transition: all 0.5s;
+		}*/
+		.xian{
+			width: 100px;
+			height: 3px;
+			background: red;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			transition: all 1s;
+		}
+	</style>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<ul>
+		<li class="active">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+		<li>8</li>
+		<div class="xian"></div>
+	</ul>
+	
+</body>
+<script type="text/javascript">
+	$(function(){
+		$("li").mouseover(function(){
+				var a=$(this).index();
+				var b=a*100;
+				console.log(b);
+				$(".xian").css({
+					"position":"absolute",
+					"left":b+"px"
+				})
+			// $(this).addClass("active").siblings().removeClass("active");
+		// 	$(this).css({
+		// 		"border-radius":"50%",
+		// 		"background":"red",
+		// 		"color":"white",
+		// 		"transition":"all 0.5s"
+		// 	}).siblings().css({
+		// 		"border-radius":"0",
+		// 		"background":"white",
+		// 		"color":"black",
+		// 		"transition":"all 0.5s"
+		// 	})
+		})
+		$("li").mouseout(function(){
+			$(".xian").css({
+				"left":"0px"
+			})
+		})
+	})
+</script>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<style media="screen">
+.nav-head a{
+    line-height:50px;
+    font-size:18px;
+    color:#9d9d9d;
+    float:left;
+    height:50px;
+}
+.nav-head a:hover{
+  color:white;
+  text-decoration:none;
+}
+.navbar{
+  margin-bottom:0px;
+  border:none;
+  background:#222222;
+}
+.nav-head-right{
+  float:left;
+}
+.nav>li>a:focus, .nav>li>a:hover{
+  background:#222222;
+  color:white;
+}
+.nav>li>a{
+    color:#9d9d9d;
+    line-height:50px;
+    padding:0 15px    ;
+}
+.ps{
+  margin-left:50px;
+}
+</style>
+<body>
+
+  <div style="width:100%; background:#222222">
+
+
+  <!-- 容器 -->
+  <div class="container">
+
+<!-- 导航条开始 -->
+  <nav class="navbar navbar-inverse">
+    <!-- 小屏幕适配 -->
+    <div class="nav-head">
+<a href="#" class="hidden-md">Bootstrap中文网</a>
+<button type="button" name="button" class="pull-right visible-xs" style="background:#ededed;border:1px solid transparent;margin-top:20px;"><i class="glyphicon glyphicon-menu-hamburger"></i> </button>
+    </div>
+    <!-- 小屏幕适配结束 -->
+    <!-- 大屏幕开始适配 -->
+<div class="nav-head-right hidden-xs  ">
+  <ul class="nav nav-pills pull-left">
+    <li role="presentation" class="ps hidden-sm"><a href="#">Home</a></li>
+    <li role="presentation" class="hidden-sm"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+    <li role="presentation" ><a href="#">Home</a></li>
+    <li role="presentation"><a href="#">Profile</a></li>
+    <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+    <ul class="nav nav-pills pull-right visible-lg">
+    <li role="presentation" class="pull-right"><a href="#">关于</a></li>
+  </ul>
+</div>
+
+    <!-- 大屏幕适配结束 -->
+  </nav>
+<!-- 导航条结束 -->
+  </div>
+    </div>
+</body>
+</html>

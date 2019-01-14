@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <link href="https://cdn.bootcss.com/minireset.css/0.0.2/minireset.min.css" rel="stylesheet">
+  <style media="screen">
+
+    .box{
+      width:800px;
+      height:730px;
+      border:1px solid white;
+      margin:10px auto;
+      position:relative;
+      background:white;
+      cursor:crosshair;
+    }
+    .gtq{
+      width:200px;
+      height:200px;
+      position:absolute;
+      top:550px;
+      left:595px;
+      user-select:none;
+    }
+    .qiqiu{
+      width:80px;
+      height:80px;
+      border:1px solid #ededed;
+      background:url("../img/xe.jpg");
+      background-size:cover;
+      border-radius:50%;
+      text-align:center;
+      line-height:80px;
+      color:white;
+      position:absolute;
+    }
+    .qiqiu2{
+      width:80px;
+      height:80px;
+      border:1px solid #ededed;
+      background:url("../img/xd.jpg");
+      background-size:cover;
+      border-radius:50%;
+      text-align:center;
+      line-height:80px;
+      color:white;
+      position:absolute;
+      top:50px;
+      left:100px;
+    }
+  </style>
+</head>
+<body bgcolor="black">
+  <div class="box">
+    <!-- 添加光头强图片 -->
+<div class="gtq">
+<img src="../img/gtq.png" style="position:absolute; top:-3px;left:-3px; disabled " alt="" class="im">
+</div>
+<!-- 制作气球 -->
+<div class="qiqiu">
+分数
+</div>
+<div class="qiqiu2">
+分数
+</div>
+  </div>
+
+</body>
+<script type="text/javascript">
+$(function(){
+  $(".box").mousedown(function(){
+    $(".im").attr("src","../img/gtq1.png")
+    $(".gtq img").css({
+      "top":"3px",
+      "left":"3px"
+    })
+  })
+  $(".box").mouseup(function(){
+    $(".im").attr("src","../img/gtq.png")
+    $(".gtq img").css({
+      "top":"-3px",
+      "left":"-3px"
+    })
+  })
+$(".box").mouseenter(function(){
+
+})
+
+
+
+})
+</script>
+</html>

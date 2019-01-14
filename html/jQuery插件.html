@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/jquery-1.8.3.min.js"></script>
+	<script type="text/javascript" src="../libs/jquery.cookie.js"></script>
+	<script type="text/javascript" src="https://img.hcharts.cn/highcharts/highcharts.js"></script>
+	<script type="text/javascript" src="https://img.hcharts.cn/highcharts/modules/exporting.js"></script>
+	<script type="text/javascript" src="https://img.hcharts.cn/highcharts-plugins/highcharts-zh_CN.js"></script>
+	<link rel="stylesheet" type="text/css" href="../css/jquery.fullPage.css">
+</head>
+<body>
+	<div id="container" style="min-width:400px;height:400px"></div>
+</body>
+<script type="text/javascript">
+	$(function(){
+		// $.cookie("小芳","18") //创建会话cookie
+		// $.cookie("杨明","17",{expires:10})
+		// $.cookie("小芳","18",{expres:-1})
+		// $.cookie("小够","18",{expres:-1,path:"/"})
+		// console.log($.cookie("小够") )
+		var json={"boy":[
+		{
+			"name":"杨明",
+			"hobby":"女",
+			"age":"18",
+			"chat":"10"
+		},
+		{
+			"name":"田小康",
+			"hobby":"吃饭",
+			"age":"20",
+			"chat":"10"
+		},
+		{
+			"name":"辉艳",
+			"hobby":"睡觉",
+			"age":"25",
+			"chat":"1"
+		},
+		{
+			"name":"杨政前",
+			"hobby":"手机",
+			"age":"22",
+			"chat":"15"
+		},
+		{
+			"name":"大海",
+			"hobby":"手机",
+			"age":"10",
+			"chat":"50"
+		},
+		{
+			"name":"徐泽东",
+			"hobby":"毛泽东",
+			"age":"50",
+			"chat":"100"
+		},
+		{
+			"name":"图图",
+			"hobby":"打游戏",
+			"age":"40",
+			"chat":"10"
+		},
+		{
+			"name":"夏晨原",
+			"hobby":"女",
+			"age":"56",
+			"chat":"10"
+		},
+		{
+			"name":"潘顺",
+			"hobby":"飞翔",
+			"age":"21",
+			"chat":"10"
+		
+		}
+]}
+var arr=new Array() ;
+for(let i=0;i<json.boy.length;i++){
+       
+}
+console.log(json.boy[0]);
+
+console.log(arr);
+		var chart = Highcharts.chart('container', {
+	chart: {
+		plotBackgroundColor: null,
+		plotBorderWidth: null,
+		plotShadow: false,
+		type: 'pie'
+	},
+	title: {
+		text: 'WEB01帅哥美女统计'
+	},
+	tooltip: {
+		pointFormat: '{boy.name}: <b>{josn.percentage:.1f}%</b>'
+	},
+	plotOptions: {
+		pie: {
+			allowPointSelect: true,
+			cursor: 'pointer',
+			dataLabels: {
+				enabled: true,
+				format: '<b>{json.name}</b>: {json.percentage:.1f} %',
+				style: {
+					color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+				}
+			}
+		}
+	},
+	
+
+	series: [{
+		name: 'Brands',
+		colorByPoint: true,
+		data: arr
+	}]
+});
+
+	})
+</script>
+</html>

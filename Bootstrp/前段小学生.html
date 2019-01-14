@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态字</title>
+    <style>
+        #box{
+            margin: 100px auto;
+            font-size: 80px;
+            color:#005aa0;
+            text-align: center;
+        }
+        .word1,.word2,.word3,.word4,.word5{
+            display: inline-block;
+            width: 90px;
+            height: 100%;
+            position: relative;
+        }
+        .word1:before,.word2:before,.word3:before,.word4:before,.word5:before{
+            content:attr(data);
+            position: absolute;
+            color: #ffffff;
+            top:0;
+            left: 3px;
+            transform-origin: left;
+            transition: transform .5s;
+        }
+        .word1:before{
+            content: "前";
+        }
+        .word2:before{
+            content: "端";
+        }
+        .word3:before{
+            content: "小";
+        }
+        .word4:before{
+            content: "学";
+        }
+        .word5:before{
+            content: "生";
+        }
+        .word1:after,.word2:after,.word3:after,.word4:after,.word5:after {
+            position: absolute;
+            color: #b3b3b3;
+            top:3px;
+            left: 10px;
+            z-index: -1;
+            transform-origin: left;
+            transition: transform .5s;
+        }
+        .word1:after{
+            content: "前";
+        }
+        .word2:after{
+            content: "端";
+        }
+        .word3:after{
+            content: "小";
+        }
+        .word4:after{
+            content: "学";
+        }
+        .word5:after{
+            content: "生";
+        }
+        .word1:hover:before,.word2:hover:before,.word3:hover:before,.word4:hover:before,.word5:hover:before{
+            transform: rotateY(-40deg) skewY(10deg);
+        }
+        .word1:hover:after,.word2:hover:after,.word3:hover:after,.word4:hover:after,.word5:hover:after{
+            transform: rotateY(40deg) skewY(10deg);
+        }
+    </style>
+</head>
+<body>
+    <div id="box">
+        <div class="word1">前</div>
+        <div class="word2">端</div>
+        <div class="word3">小</div>
+        <div class="word4">学</div>
+        <div class="word5">生</div>
+    </div>
+</body>
+<ml>

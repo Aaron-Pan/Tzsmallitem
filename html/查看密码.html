@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="password" name=""  >
+	<button>显示</button>
+
+</body>
+<script type="text/javascript">
+	var Btn=document.querySelector("button");
+	var oIn=document.querySelector("input");
+	
+	Btn.onclick=function(){
+		if(oIn.type=="password")
+		{
+			oIn.removeAttribute("type");
+			oIn.setAttribute("type","text");
+			this.innerHTML="隐藏";
+		}
+		else{
+			oIn.removeAttribute("type");
+			oIn.setAttribute("type","password");
+			this.innerHTML="显示";
+		}
+	}
+
+</script>
+</html>

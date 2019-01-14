@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 400px;
+			border:1px solid black;
+			margin: 100px auto;
+			text-align: center;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input type="text" class="username" placeholder="用户名">
+		<br>
+		<br>
+		<input type="password" class="pa" placeholder="密码">
+		<br>
+		<br>
+		<input type="checkbox" class="ck" value="15天免登陆">15天免登陆
+		<br>
+		<br>
+		<input type="button" value="登录" class="btn">
+	</div>
+</body>
+<script type="text/javascript">
+	var oUser = document.querySelector(".username");
+	var oPass = document.querySelector(".pa");
+	var oBtn = document.querySelector(".btn");
+	var oCk = document.querySelector(".ck");
+	var d = new Date();
+	var time = 15;
+
+	oBtn.onclick = function(){
+		console.log(oCk.checked)
+		var userVal = oUser.value;
+		var passVal = oPass.value;
+		if( oCk.checked ){
+			document.cookie = userVal+"="+passVal +";expires="+d.toGMTString(d.setTime(d.getTime()+time*24*60*60*1000))
+		}else{
+			alert("您需要15天免登陆吗？")
+		}
+	}
+
+</script>
+</html>

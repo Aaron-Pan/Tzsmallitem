@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin:0;
+			padding: 0;
+		}
+		.menu{
+			width: 300px;
+			height: auto;
+			border: 1px solid black;
+			margin: 20px auto;
+			list-style: none;
+			border-bottom: none;
+		}
+		.item{
+			width: 300px;
+			line-height: 40px;
+			border-bottom: 1px solid black;
+		}
+		.one{
+			width: 300px;
+			height: 40px;
+			display: block;
+			background: #999;
+			text-align: center;
+			font-size: 20px;
+		}
+		.flag{
+			display: block;
+			width: 40px;
+			height: 40px;
+			float: left;
+			margin-left: 20px; 
+			font-style: normal;
+		}
+		.second{
+			text-align: center;
+			line-height: 30px;
+			background: lightgray;
+			display: none;
+		}
+		.second p:hover{
+			background: white;
+			font-weight: bold;
+		}
+		.item:hover .one{
+			font-weight: bold;
+			font-size: 24px;
+		}
+	</style>
+	<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="../jq/jquery-3.1.1.min.js"></script> -->
+</head>
+<body>
+<ul class="menu">
+	<li class="item">
+		<span class="one">
+			<i class="flag">+</i>
+			粮油百货
+		</span>
+		<div class="second">
+			<p>东北大米</p>
+			<p>小米</p>
+			<p>紫米</p>
+			<p>黑米</p>
+		</div>
+	</li>
+	<li class="item">
+		<span class="one">
+			<i class="flag">+</i>
+			海鲜水产
+		</span>
+		<div class="second">
+			<p>波士顿大龙虾</p>
+			<p>基围虾</p>
+			<p>花甲</p>
+			<p>鲍鱼</p>
+		</div>
+	</li>
+	<li class="item">
+		<span class="one">
+			<i class="flag">+</i>
+			新鲜果蔬
+		</span>
+		<div class="second">
+			<p>红富士</p>
+			<p>小米蕉</p>
+			<p>榴莲</p>
+			<p>龙眼</p>
+		</div>
+	</li>
+	<li class="item">
+		<span class="one">
+			<i class="flag">+</i>
+			快送外卖
+		</span>
+		<div class="second">
+			<p>青椒肉丝</p>
+			<p>红烧鲈鱼</p>
+			<p>干煸四季豆</p>
+			<p>洋芋粑粑</p>
+		</div>
+	</li>
+	<li class="item">
+		<span class="one">
+			<i class="flag">+</i>
+			进口水果
+		</span>
+		<div class="second">
+			<p>泰国榴莲</p>
+			<p>巴西佛手</p>
+			<p>红富士</p>
+			<p>美国红蛇果</p>
+		</div>
+	</li>
+	<li class="item">
+		<span class="one">
+			<i class="flag">+</i>
+			鲜花绿植
+		</span>
+		<div class="second">
+			<p>红玫瑰</p>
+			<p>康乃馨</p>
+			<p>蓝色的妖姬</p>
+			<p>粉玫瑰</p>
+		</div>
+	</li>
+</ul>
+</body>
+<script type="text/javascript">
+
+$(function(){
+	// console.log($)
+	$(".one").click(function(){
+		// 判断当前的符号
+		var flag = $(this).find(".flag").html()
+		console.log(flag)
+		if( flag == "+" ){
+			//显示二级部分
+			$(this).next(".second").stop().slideDown()
+			$(this).find(".flag").html("-")
+		}else{
+			//显示二级部分
+			$(this).next(".second").stop().slideUp()
+			$(this).find(".flag").html("+")
+		}
+		
+	})
+})
+</script>
+
+
+</html>

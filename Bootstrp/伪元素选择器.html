@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style media="screen">
+    *{
+      margin:0;
+      padding:0;
+    }
+    .item{
+      width: 200px;
+      height: 50px;
+      margin:50px auto;
+      list-style: none;
+    }
+    .item li{
+      width: 24px;
+      height: 24px;
+      background:url("../img/1.png") no-repeat;
+      float: left;
+      background-size:cover;
+    }
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <ul class="item">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
+</div>
+</body>
+<script type="text/javascript">
+  window.onload=function(){
+      var arr=document.querySelectorAll("li");
+      console.log(arr);
+      for (let i = 0; i < arr.length; i++) {
+        arr[i].onmouseenter=function(){
+          for(var j = 0;j < arr.length ; j++)
+          {
+            arr[j].style.backgroundPosition="0px 0px";
+          }
+          for(var k = i; k >= 0 ; k--)
+          {
+            arr[k].style.backgroundPosition="0px -39px";
+          }
+        }
+      }
+
+
+  }
+</script>
+</html>

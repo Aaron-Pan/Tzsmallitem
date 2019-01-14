@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 1200px;
+			height: 600px;
+			margin: 0 auto;
+			border: 1px solid black;
+		}
+		button{
+			padding: 10px 50px;
+		}
+		.Imgbox{
+			width: 500px;
+			height: 400px;
+
+		}
+		.Imgbox img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<div class="box">
+		<div>
+			<button class="xs">显示</button>
+			<button class="hi">隐藏</button>
+			<button class="sd">滑入</button>
+			<button class="su">滑出</button>
+			<button class="fi">淡入</button>
+			<button class="fo">淡出</button>
+			<button class="to">显示/隐藏</button>
+			<div class="Imgbox"> 
+			<img src="../img/aa.jpg">
+			</div>
+		</div>
+		
+	</div>
+</body>
+	<script type="text/javascript">
+		// console.log($);
+		//预加载 
+
+		//当全部资源加载完以后执行 
+		$(function(){
+			$(".hi").click(function(){
+				$(".Imgbox").hide(500)  //改变宽高和透明度
+			})
+			$(".xs").click(function(){
+				$(".Imgbox").show(500)
+			})
+			$(".sd").click(function(){
+				$(".Imgbox").slideDown(500)
+			})
+			$(".su").click(function(){
+				$(".Imgbox").slideUp(500)
+			})
+			$(".fi").click(function(){
+				$(".Imgbox").fadeIn(500)
+			})
+			$(".fo").click(function(){
+				$(".Imgbox").fadeOut(500)
+			})
+			$(".to").click(function(){
+				$(".Imgbox").toggle(500)
+			})
+
+		});
+
+		//仅仅当结构加载完毕即执行
+		// $(document).ready()
+
+
+
+	</script>
+</html>

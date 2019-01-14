@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style media="screen">
+  .box{
+    width:550px;
+    height:150px;
+    border:1px solid black;
+    position:absolute;
+    top:0px;
+    left:0px;
+    right:0px;
+    bottom:0px;
+    margin:auto;
+    background:#ededed;
+    padding:20px;
+  }
+  .btn{
+    padding:5px 7px;
+    background:none;
+  }
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="btn-toolbar" role="toolbar" aria-label="...">
+    <!-- 第一个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-user"></span></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-envelope"></button>
+        <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></button>
+          <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></button>
+        <span style="color:skyblue;border:none;font-size:30px;line-height:30px;margin-left:5px;">|</span>
+</div>
+
+<!-- 第一个按钮组结束 -->
+<!-- 第二个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-user"></span></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-envelope"></button>
+          <span style="color:skyblue;border:none;font-size:30px;line-height:30px;margin-left:5px;">|</span>
+        </div>
+<!-- 第三个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-user"></span></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-envelope"></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-star-empty"></button>
+  <span style="color:skyblue;border:none;font-size:30px;line-height:30px;margin-left:5px;">|</span>
+</div>
+<!-- 第四个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-th-list"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove"></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-ok"></button>
+
+</div>
+<br>
+<br>
+<br>
+<!-- 第二排 -->
+<!-- 第1个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-user"></span></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-envelope"></button>
+          <span style="color:skyblue;border:none;font-size:30px;line-height:30px;margin-left:5px;">|</span>
+        </div>
+<!-- 第二个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-th-list"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-remove"></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-ok"></button>
+<span style="color:skyblue;border:none;font-size:30px;line-height:30px;margin-left:5px;">|</span>
+</div>
+<!-- 第三个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-align-left"></span></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-center"></button>
+    <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-align-right"></button>
+<span style="color:skyblue;border:none;font-size:30px;line-height:30px;margin-left:5px;">|</span>
+
+</div>
+<!-- 第四个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+      <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-align-justify"></span></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-list"></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-indent-left"></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-indent-right"></button>
+
+  <span style="color:skyblue;border:none;font-size:30px;line-height:30px;margin-left:5px;">|</span>
+</div>
+<!-- 第五个按钮组 -->
+<div class="btn-group" role="group" aria-label="...">
+    <button type="button" class="btn btn-default">  <span class="glyphicon glyphicon-user"></span></button>
+      <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-envelope"></button>
+</div>
+</div>
+</body>
+</html>

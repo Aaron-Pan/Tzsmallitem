@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<input type="text" name="" placeholder="请输入电话">
+	<button>登录</button>
+</body>
+<script type="text/javascript">
+	var Btn=document.querySelector("button");
+	var Reg=/^(\d{3,4}-)?([1-9]\d{6,7})$/;
+	var str="";
+	Btn.onclick=function(){
+	var inp=document.querySelector("input");
+	str=inp.value;
+	
+	if (Reg.test(str)) {
+		alert("输入正确")
+
+	}
+	else{
+		alert("输入有误")
+	}
+	console.log(str);
+	inp.value="";
+}
+</script>
+</html>

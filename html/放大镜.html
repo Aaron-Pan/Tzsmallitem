@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.box{
+			width: 900px;
+			height: 700px;
+			border: 1px solid black;
+			margin: 20px auto;
+			position: relative;
+		}
+		.left{
+			width: 400px;
+			height: 225px;
+
+			border: 1px solid black;
+			float: left;
+			
+
+		}
+		.meng{
+			width: 400px;
+			height: 225px;
+			position: absolute;
+			
+			z-index: 10;
+		}
+		.right{
+			width: 400px;
+			height: 225px;
+			border: 1px solid black;
+			float: right;
+			overflow: hidden;
+			position: relative;
+		}
+		.kuang{
+			width: 120px;
+			height: 90px;
+			background: #cccccc;
+			opacity: 0;
+			position: absolute;
+		
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="left">
+		<div class="meng"></div>
+		
+		<img src="../img/ttt.jpeg" width="100%"  style="display: block;">
+		<div class="kuang"></div>
+	</div>
+	
+	<div class="right">
+		<img src="../img/ttt.jpeg" width="1600px" height="900px"  style=" position: absolute;">
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	var oLe=document.querySelector(".left");
+	var oRi=document.querySelector(".right");
+	var Kuang=document.querySelector(".kuang");
+	var oImg=document.querySelectorAll("img");
+	var oMeng=document.querySelector(".meng");
+	oLe.onmousemove=function(event){
+		var evt=event||window.event;
+		var x=evt.offsetX;
+		var y=evt.offsetY;
+		// console.log(x);
+		// console.log(y);
+		Kuang.style.opacity="0.5";
+		var kuangX=x-Kuang.offsetWidth/2;
+		var kuangY= y-Kuang.offsetHeight/2;
+		
+		
+		if(kuangX<=0)
+		{
+			kuangX=0;
+		}
+		else if(kuangX>=oLe.offsetWidth-Kuang.offsetWidth)
+		{
+			kuangX=oLe.offsetWidth-Kuang.offsetWidth;
+		}
+		if(kuangY<=0)
+		{
+			kuangY=0;
+		}
+		else if(kuangY>=oLe.offsetHeight-Kuang.offsetHeight)
+		{
+			kuangY=oLe.offsetHeight-Kuang.offsetHeight;
+		}
+		Kuang.style.left=kuangX +"px";
+		Kuang.style.top= kuangY +"px";
+		//移动的比例
+		var blx=kuangX / (oLe.offsetWidth-Kuang.offsetWidth);
+		var bly=kuangY / (oLe.offsetHeight-Kuang.offsetHeight);
+		// console.log(blx,bly);
+	//  求大图的实际移动距离
+		// console.log(oImg[1].offsetWidth-oRi.offsetWidth)
+		var bigX=-blx*(oImg[1].offsetWidth-oRi.offsetWidth);
+		var bigY=-bly*(oImg[1].offsetHeight-oRi.offsetHeight);
+		oImg[1].style.top=bigY +"px"
+		oImg[1].style.left=bigX +"px"
+		
+	}
+	oLe.onmouseover=function()
+	{
+		Kuang.style.display="block";
+		oImg[1].style.display="block";
+	}
+	oLe.onmouseout=function()
+	{
+		Kuang.style.display="none";
+		oImg[1].style.display="none";
+	}
+</script>
+</html>
