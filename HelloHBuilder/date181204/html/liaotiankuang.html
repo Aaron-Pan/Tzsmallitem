@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			position: relative;
+			width: 400px;
+			height: 500px;
+			
+			border: 5px solid deeppink;
+			margin: 30px auto;
+		}
+		.inbox{
+			width: 400px;
+			height: 400px;
+			background:url(../img/t01ef769ff42d25b4b7.jpg) no-repeat;
+			background-size: 100% 100%;
+			overflow-y: scroll;
+		}
+		.ss{
+			border: 2px dashed brown;
+			background: lightblue;
+			font-size: 14px;
+			border-radius: 5px;
+			line-height: 20px;
+			float: right;
+			padding: 3px;
+			word-wrap: break-all;
+			margin:5px 20px 0px 230px; 
+		}
+
+		#inp{
+			width: 392px;
+			height: 96px;
+			border: 5px double purple;
+			position: absolute;
+			top: 400px;
+
+		}
+		#fasong{
+			width: 60px;
+			height: 25px;
+			background: purple;
+			position: absolute;
+			top: 460px;
+			left: 330px;
+			border: none;
+		}
+		li{
+			list-style: none;
+			background: gold;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="inbox">
+	<ul>
+		
+	</ul></div>
+	<input type="text" id="inp" name="" placeholder="">
+	<button id="fasong">发送</button>
+</div>
+</body>
+<script type="text/javascript">
+
+	var fa=document.getElementById("fasong");
+	var a=document.getElementById("inp");
+	a.scrollIntoView();
+	
+	fa.onclick=function(){
+		
+if(a.value==""){
+		a.placeholder="请输入文字!";
+}else{
+	var ul=document.querySelector("ul");
+
+	//创建子元素 
+	
+
+	var li=document.createElement("li");
+	var span=document.createElement("span");
+
+	ul.appendChild(li);
+	li.appendChild(span);
+	span.innerHTML=a.value;
+	span.className="ss";
+	a.value="";
+	a.placeholder="";
+	span.scrollIntoView();
+
+}
+}
+// var f=document.getElementsByTagName("li");
+// var s=document.getElementsByTagName("span");
+// var tem=setInterval(function(){
+
+// var x=f.length;
+// 	console.log(x);
+// if(x!=0){
+// f.scrollIntoView();
+// }
+// },1000)
+
+</script>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 800px;
+			height: 500px;
+			border: 1px solid black;
+			margin:50px auto;
+			position: relative;
+		}
+		.left{
+			width: 50px;
+			height: 30px;
+			background: black;	
+			color: white;
+			opacity: 0.5;
+			position: absolute;
+			line-height: 30px;
+			text-align: center;
+			top:245px;
+			cursor: pointer;
+			left: 0;
+				}
+		.right{
+			width: 50px;
+			height: 30px;
+			background: black;	
+			color: white;
+			line-height: 30px;
+			text-align: center;
+			opacity: 0.5;
+			position: absolute;
+			top:245px;
+			cursor: pointer;
+			right: 0;
+				}
+			.one{
+				
+				position: absolute;
+				z-index: 5;
+				top: 450px;
+				left: 550px;
+				
+			}
+			.one li{
+				width: 30px;
+				height: 30px;
+				background: yellow;
+				border: 1px solid red;
+				margin-left: 20px;
+				
+				cursor: pointer;
+				list-style: none;
+				float: left;
+			}
+			.item{
+				width: 30px;
+				height: 30px;
+				border: none;
+				background: yellow;
+			}
+			.imgg{
+				transition: all 0.5s;
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				opacity: 0;
+			}
+
+	</style>
+</head>
+<body>
+	<div class="box">
+		<img src="../img/timg1.jpg" style="opacity: 1" class="imgg">
+		<img src="../img/timg2.jpg" class="imgg">
+		<img src="../img/timg3.jpg" class="imgg">
+		<img src="../img/timg4.jpg" class="imgg">
+	<div class="left">向左</div> 
+	<div class="right">向右</div>
+	<ul class="one">
+		<li><button class="item" style="background: red;">1</button> </li>
+		<li><button class="item">2</button> </li>
+		<li><button class="item">3</button> </li>
+		<li><button class="item">4</button> </li>
+	</ul>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var imgOne=document.querySelectorAll(".imgg");
+	console.log(imgOne);
+	var Oitem=document.querySelectorAll(".item");
+	console.log(Oitem);
+	var index=0;
+	for(let i=0;i<Oitem.length;i++){
+		// Oitem[i].id=i;
+		Oitem[i].onclick=function(){
+			
+			// index=this.id;
+			
+			
+			for(let j=0;j<imgOne.length;j++){
+				
+				Oitem[j].style.background="yellow";
+				imgOne[j].style.opacity= 0;
+				// console.log(imgOne[j]);
+				}
+			imgOne[i].style.opacity="1"
+			this.style.background="red";
+			// console.log(this.index);
+			// var c=this.index;
+			// console.log(c);
+			// var Oleft=document.querySelector(".left");
+			// function fnn(){
+			// 	for(var i=0;i<4;i++){
+			// 		Oitem[i].style.background="yellow"
+			// 		Oitem[c--].style.background="red"
+
+			// 	imgOne[i].style.opacity= 0;
+			// 	imgOne[c-1].style.opacity="1";
+			
+			// 	if(c<0)
+			// 	{
+			// 		c=3;
+			// 	}
+
+
+			// }
+
+			// }
+			
+		}
+		
+	}
+Oleft=document.querySelector(".left");
+			
+			Oleft.onclick=function(){
+			
+				index--;
+
+				if(index<0){
+            	index = 3;
+            }
+            	console.log(index);
+				
+			 	for(let j=0;j<imgOne.length;j++){
+				
+				Oitem[j].style.background="yellow";
+				imgOne[j].style.opacity= 0;
+				// console.log(imgOne[j]);
+				}
+			imgOne[index].style.opacity="1"
+			Oitem[index].style.background="red"
+			
+			 	
+        
+
+	}
+	ORight=document.querySelector(".right");
+	
+			
+			ORight.onclick=function(){
+			
+				index++;
+
+				if(index>3){
+            	index = 0;
+            }
+            	console.log(index);
+				
+			 	for(let j=0;j<imgOne.length;j++){
+				
+				Oitem[j].style.background="yellow";
+				imgOne[j].style.opacity= 0;
+				// console.log(imgOne[j]);
+				}
+			imgOne[index].style.opacity="1"
+			Oitem[index].style.background="red"
+			
+			 	
+        
+
+	}
+	fn();
+
+	var timer;
+	function fn(){
+	timer=setInterval(function(){
+
+				index++;
+
+				if(index>3){
+            	index = 0;
+            }
+            	console.log(index);
+				
+			 	for(let j=0;j<imgOne.length;j++){
+				
+				Oitem[j].style.background="yellow";
+				imgOne[j].style.opacity= 0;
+				// console.log(imgOne[j]);
+				}
+			imgOne[index].style.opacity="1"
+			Oitem[index].style.background="red"
+			
+	},3000)
+	}
+	var Obox=document.querySelector(".box");
+	Obox.onmouseover=function(){
+		clearInterval(timer);
+	}
+	Obox.onmouseleave=function(){
+		fn();
+	}
+
+
+	
+</script>
+</html>

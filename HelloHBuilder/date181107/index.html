@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100px;
+				height: 100px;
+				border: 1px solid black;
+				margin: 100px auto;
+				animation: change 3s 3s infinite alternate;
+			}/*第一个动画名   动画执行时间   延迟时间   无线循环   回播*/
+			@keyframes change{
+				from
+				{
+					width: 100px;
+					height: 100px;
+					background: aqua;
+					border: 3px solid yellow;
+				}
+				to
+				{
+					width: 200px;
+					height: 200px;
+					background: red;
+					border: 5px solid  yellow;
+					border-radius: 50%;
+				}
+			}
+			.box1{
+				width: 100px;
+				height: 100px;
+				background: yellow;
+				border: 5px solid black;
+				border-radius: 50%;
+				position: absolute;
+				top: 60%;
+				left: 0;
+				animation: move 5s 0s infinite alternate;
+			}
+			@keyframes move{
+				0%{top: 60%;
+					left: 10px;
+					border: 10px solid olivedrab;
+				}
+				20%{
+					top: 50%;
+					left: 100px;
+					background: pinl;
+				}
+				50%{
+					top: 80%;
+					left: 300px;
+					background: #00FFFF;
+				}
+				100%{
+					top: 10%;
+					left: 600px;
+					background: brown;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box"></div>
+		<div class="box1"></div>
+	</body>
+</html>

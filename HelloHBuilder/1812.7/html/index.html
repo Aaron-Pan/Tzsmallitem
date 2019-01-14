@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div class="infoBox">
+		用户名：<input type="text" class="username" name="">
+		联系方式：<input type="text" class="email" name="">
+		年龄：<input type="number" class="age" name="">
+		<button class="add">添加</button>
+	</div>
+	<hr>
+	<table class="tb" border="1" width="700px" style="text-align: center; border-collapse: collapse;" align="center">
+		<tr>
+			<td>姓名</td>
+			<td>联系方式</td>
+			<td>年龄</td>
+			<td>操作</td>
+		</tr>
+		<tr>
+			<td>杨总</td>
+			<td>123123123@qq.com</td>
+			<td>18</td>
+			<td><button onclick="del(this)">删除</button></td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+
+	// 声明数组存放所有的输入框的状态
+	var arr = [false,false,false]
+
+	// 删除一行操作
+	function del(obj){
+		// console.log(obj.parentNode.parentNode)
+		// 找到待删除的元素
+		var oTr = obj.parentNode.parentNode
+		oTr.parentNode.removeChild(oTr)
+	}
+
+	// 获取所有的待操作元素
+	var oUserName = document.querySelector(".username");
+	var oEmail = document.querySelector(".email");
+	var oAge = document.querySelector(".age");
+	var oAddBtn = document.querySelector(".add");
+	var oTb = document.querySelector(".tb");
+
+	// 1,用户名的非空验证
+	oUserName.onblur = function(){
+		var userVal = oUserName.value;
+		// console.log(userVal)
+		if( userVal == "" ){ 
+			oUserName.setAttribute("placeholder","用户名输入不能为空");
+			arr[0] = false
+		}else{
+			arr[0] = true;
+			oUserName.setAttribute("placeholder","");
+		}
+	}
+
+
+	// 2,联系方式的非空验证
+	oEmail.onblur = function(){
+		var emailVal = oEmail.value;
+		// console.log(userVal)
+		if( emailVal == "" ){ 
+			oEmail.setAttribute("placeholder","联系方式输入不能为空");
+			arr[1] = false
+		}else{
+			oEmail.setAttribute("placeholder","");
+			arr[1] = true
+		}
+	}
+
+	// 3,验证年龄
+	oAge.onblur = function(){
+		var ageVal = oAge.value;
+		// console.log(oAge.value)
+		// if( ageVal == "" && ageVal <= 0 ){
+		// 	console.log("不能为空")
+		// }
+		if( ageVal == "" ){ 
+			oAge.setAttribute("placeholder","年龄输入不能为空");
+			arr[2] = false
+		}else if(ageVal <= 0){
+			oAge.value = ""
+			oAge.setAttribute("placeholder","年龄输入不能小于0");
+			arr[2] = false
+		}
+		else{
+			oAge.setAttribute("placeholder","");
+			arr[2] = true
+		}
+	}
+
+
+
+	// 给添加按钮加点击事件
+	oAddBtn.onclick = function(){
+		// 判断所有的输入框值是否合法
+		if( arr.indexOf(false) >= 0 ){
+			// 输入不合法的情况，让第一个框获取焦点
+			oUserName.focus()
+		}else{
+			// 全部输入合法的情况
+			// 获取所有的输入值
+			var username = oUserName.value
+			var age = oAge.value
+			var email = oEmail.value
+
+			var oNewTr = oTb.insertRow(oTb.rows.length);
+			// console.log(oTb.rows.length)
+			oNewTr.innerHTML = `<td>${username}</td>
+			<td>${email}</td>
+			<td>${age}</td>
+			<td><button onclick="del(this)">删除</button></td>`
+
+			oUserName.value = ""
+			oAge.value = ""
+			oEmail.value = ""
+			arr=[false,false,false]
+
+		}
+
+	}
+
+
+
+</script>
+</html>

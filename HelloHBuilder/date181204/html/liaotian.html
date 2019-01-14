@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 500px;
+			height: 600px;
+			border: 1px solid black;
+			margin:50px auto ;/*居中一直宽高的块状元素*/
+			padding: 10px;
+		}
+		.screen{
+			width: 500px;
+			height: 300px;
+			border: 1px solid black;
+			list-style: none;
+			overflow-y:scroll; 
+		}
+		.in{
+			width: 500px;
+			height: 150px;
+			font-size: 30px;
+			margin-top: 10px;
+			resize:none;
+		}
+		.btn{
+			width: 100px;
+			height: 50px;
+			float: right;
+			margin:20px; 
+		}
+		.item{
+			overflow: hidden;
+			margin: 10px;
+			
+		}
+		.item span{
+			padding: 5px;
+			border-radius: 10px;
+			max-width: 300px; /*设置最大宽度*/
+		}
+		.item .left{
+			float: left;
+			background: #ccc;
+		}
+		.item .right{
+			float: right;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+<div class="box">	
+<ul class="screen">
+	<li class="item">
+		<span class="left">在吗？</span>
+	</li>
+	<li class="item">
+		<span  class="left">在？</span>
+	</li>
+	<li class="item">
+		<span  class="left">说句话啊？</span>
+	</li>
+	<li class="item">
+		<span  class="left">嘿？不搭理人？？你知道我是谁吗？</span>
+	</li>
+	<li class="item">
+		<span  class="right">怎么了？</span>
+	</li>
+</ul>
+<textarea class="in"></textarea> 
+<button class="btn">发送</button>
+</div>
+</body>
+<script type="text/javascript">
+	var oBtn=document.querySelector(".btn");
+	var oIn=document.querySelector(".in");
+	var Oscreen=document.querySelector(".screen");
+	function fn(){
+		var val=oIn.value;
+		// 创建span
+		var oSp=document.createElement("span");
+		oSp.innerHTML =val;
+		oSp.setAttribute("class","right");
+		var Oli=document.createElement("li");
+		Oli.setAttribute("class","item");
+		Oli.appendChild(oSp);
+		console.log(Oli);
+		Oscreen.appendChild(Oli);
+		oIn.value="";
+		Oli.scrollIntoView();
+	}
+	oBtn.onclick=function(){
+		fn();
+
+	}
+	oIn.onkeydown=function(evt){
+		var e;
+		e=evt||window.event;
+		if(e.keyCode==13 && e.ctrlKey)
+		
+	{
+		fn();
+		
+	}
+		
+			
+		
+	}
+	
+</script>
+</html>

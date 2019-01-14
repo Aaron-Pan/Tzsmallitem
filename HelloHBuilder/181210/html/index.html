@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<input type="text" class="in" name="">	
+</body>
+<script type="text/javascript">
+	var oIn= document.querySelector(".in");
+	oIn.onkeydown = function(evt){
+			var e = evt ||window.event;
+			console.log(e.keyCode)
+	}
+</script>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 1200px;
+			height: 260px;
+			
+			margin: 50px auto;
+			overflow: hidden;
+		}
+		
+		.item{
+			float: left;
+			width: 160px;
+			height: 260px;
+			position: relative;
+			transition: all 1s;
+			overflow: hidden;
+		}
+		.gai{
+			width: 160px;
+			height: 260px;
+			background: black;
+			position: absolute;
+			z-index: 2;
+			top: 0;
+			left: 0;
+			opacity: 0.3;
+			transition: all 1s;
+
+		}
+		.item img{
+			position: absolute;
+			left: -55%;
+			transition: all 1s;
+		}
+		p{
+			width: 20px;
+			height: 60px;
+			font-size: 30px;
+		
+			color: white;
+			position: absolute;
+			z-index: 5;
+			top: 10%;
+			left: 47%;
+			transition: all 0.3s;
+		}
+	</style>
+</head>
+<body>
+	<div style="margin: 0 auto; width: 1200px;"><img src="../img/top.png" width="100%"> </div>
+	<div class="box">
+		
+			<div class="item" style="width: 400px;"><p>园林酒店</p><img src="../img/1.jpg" style="left: 0px;">
+				<div class="gai" style="width: 400px;"></div> 
+				
+			</div>
+			<div class="item"><p>设计师酒店</p><img src="../img/2.jpg">
+			<div class="gai"></div> 
+			</div>
+			<div class="item"><p>青年旅社</p><img src="../img/3.jpg">
+			<div class="gai"></div> 
+			</div>
+			<div class="item"><p>特色客栈</p><img src="../img/4.jpg">
+			<div class="gai"></div>
+			</div>
+			<div class="item"><p>海岛酒店</p><img src="../img/5.jpg">
+			<div class="gai"></div>
+			</div>
+			<div class="item"><p>海外温泉</p><img src="../img/6.jpg">
+			<div class="gai"></div>
+			</div>
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var Oli=document.querySelectorAll(".item");
+	var Ogai=document.querySelectorAll(".gai");
+	var Oimg=document.querySelectorAll(".item img")
+	var Op=document.querySelectorAll("p");
+	for(let i=0;i<Oli.length;i++)
+	{
+		Oli[i].onmouseenter=function(){
+			for(let j=0;j<Oli.length;j++)
+			{
+				Oli[j].style.width="160px";
+				Ogai[j].style.opacity=0.5;
+				Oimg[j].style.left="-55%"
+				Op[j].style.zIndex=5;
+			}
+			this.style.width="400px";
+			Ogai[i].style.opacity=0;
+			Oimg[i].style.left=0;
+			Op[i].style.zIndex=0;
+			}
+	}
+	
+	for(let x=0;x<Ogai.length;x++)
+	{
+		Ogai[x].onmouseenter=function(){
+			for(let j=0;j<Ogai.length;j++)
+			{
+				Ogai[j].style.width="160px"
+			}
+			this.style.width="400px"
+			}
+	}
+</script>
+</html>

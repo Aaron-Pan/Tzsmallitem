@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<!-- <input type="text" name="" id="in" value="请输入手机号码" /> -->
+<input type="" name="" class="inpu" />
+</body>
+<script type="text/javascript">
+	// var input=document.getElementById("in");
+	// input.onfocus=function(){
+		
+	// 	input.value="";
+	// }
+	// input.onblur=function(){
+	// 	input.value="请输入手机号码";
+	// }
+	var inp=document.getElementsByClassName("inpu")[0];
+	inp.onkeydown=function(){
+		console.log("键盘按下");
+
+	}
+	inp.onkeyup=function(){
+		console.log("键盘抬起");
+	}
+</script>
+</html>

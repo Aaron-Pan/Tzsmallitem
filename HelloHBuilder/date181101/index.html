@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 600px;
+				height: 650px;
+				margin: 50px auto;
+				border: 1px solid black;
+			}
+			.kuang{
+				width: 500px;
+				height: 150px;
+				border: 1px solid black;
+				margin: 10px 50px;
+				
+			}
+			.kuang legend{
+				color: red;
+				border: 0.5px solid black;
+				margin-left: 20px;
+			}
+			.kuang label{
+				margin-left: 50px;
+			}
+			
+			.kuang1{
+				width: 500px;
+				height: 250px;
+				border: 1px solid black;
+				margin: 10px 50px;
+				
+			}
+			.kuang1 label{
+				color: #ccc;
+				margin-left: 50px;
+				font-size: 12px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<h3 style="margin: 20px 50px;">已注册用户登录</h3>
+			<form>
+				<fieldset class="kuang">
+					<legend>用户登录</legend>
+					<label>用户名</label>
+					<input type="text" />
+					<br />
+					<label>密码</label>
+					<input type="password" />
+					<br />
+					<label>记住我</label>
+					<input type="radio"  />
+					<br />
+					<input type="button" value="登录" />
+					<p style="cursor: pointer; color: red; font-size: 12px;">你忘记尼玛？</p>
+					</fieldset>
+					
+					<h3 style="margin: 20px 50px;">未注册创建账户</h3>
+					<fieldset class="kuang1">
+					<legend>用户注册</legend>
+					<p style="color: red; font-size: 12px;">您的电子邮箱不会被公布出去，但是必须填写，请您在注册之前认真阅读服务条款</p>
+					<label>用户名</label>
+					<input type="text" />
+					*(最多30个字符)
+					<br />
+					<label>电子邮箱</label>
+					<input type="email" />*
+					<br />
+					<label>密码</label>
+					<input type="password" />*(最多15个字符)
+					<br />
+					<label>重复密码</label>
+					<input type="password" />*
+					<br />
+					<label>同意服务条款</label>
+					<input type="radio" />
+					<span style="color: red; font-size: 12px;">先看看条款?</span>
+					<br />
+					<input type="submit"  />
+					<input type="reset" />
+					<br />
+					<p style="color: red; font-size: 12px;">*在提交您的注册信息时，我们认为您已经同意了我们的服务条款。</p>
+				<p style="color: red; font-size: 12px;">*这些条款可能在未经您同意的时候进行修稿。</p>
+				</fieldset>
+				
+			</form>
+		</div>
+	</body>
+</html>

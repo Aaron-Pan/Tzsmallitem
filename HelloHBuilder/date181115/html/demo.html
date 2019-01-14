@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<script type="text/javascript">
+	//id选择器
+	//根据ID选择器拿到标签
+	window.onload=function(){
+	var Odemo=document.getElementById("demo");
+	//给div添加点击事件
+	Odemo.onclick=function(){
+		alert(1111);
+		// console.log(111);
+	}
+	Odemo.style.background="red";
+	console.log(Odemo);
+	//类选择器
+	var Class=document.getElementsByClassName("box");
+	console.log(Class);
+	//标签选择器
+	var Tag=document.getElementsByTagName("div");
+	console.log(Tag);
+	}
+</script>
+</head>
+<body>
+	<div id="demo">id选择器</div>
+	<div class="box">类选择器</div>
+	<p class="box">dad</p>
+	<span class="box"> ada</span>
+
+</body>
+
+</html>

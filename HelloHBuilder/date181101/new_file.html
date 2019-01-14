@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}	
+			
+			.box{
+				width: 100px;
+				height: 50px;
+				border: 1px solid purple;
+				position: fixed;
+				left: 500px;
+				top:100px;
+				
+			}
+			.big-box{
+				/*display: none;*/
+				width: 100px;
+				height: 8px;
+			/*	background: url(../img/timg.jpg) no-repeat;*/ 
+				
+				background: red;
+				overflow: hidden;
+				transform: rotateY(90deg);
+				
+			
+				}
+				.ss{
+					width: 100px;
+					height: 42px;
+					background: red;
+					opacity: 0;
+				}
+				.bbox{
+					width: 100px;
+					height: 50px;
+					
+				}
+				.box:hover div{
+					display: block;
+					transform: rotateY(0deg);
+					transition: all 2s;
+				
+				}
+			
+			.box:hover .bbox{
+				display: block;
+				
+				transition: all 5s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+		<div class="bbox">
+			<div class="ss"></div>
+			<div class="big-box"></div>
+				
+			</div>
+		</div>
+		</div>
+		
+	</body>
+</html>

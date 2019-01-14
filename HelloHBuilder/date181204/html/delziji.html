@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<ul>
+	<li>我是LI标签</li>
+	<li>我是LI标签</li>
+	<li>我是LI标签</li>
+</ul>
+<button>点我添加LI</button>
+</body>
+<script type="text/javascript">
+	var btn=document.querySelector("button");
+	btn.onclick=function(){
+		var ul=document.querySelector("ul");
+		var li=document.createElement("li");
+		var t=document.createTextNode("我是增加的");
+		li.appendChild(t);
+		ul.appendChild(li);
+		
+	}
+</script>
+</html>

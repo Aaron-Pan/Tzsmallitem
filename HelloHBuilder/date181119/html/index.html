@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+<script type="text/javascript">
+	// function count(a,b){
+	// 	alert(a+b);
+	// }
+	// count(2);
+	// var arr=new Array(1,5,2,"a");
+	// console.log(arr);
+	//把原数组里面的每个数扩大成五倍
+	var arr=[25,34,41,53,123,58,55,4,54,88,51,2,19,9,12,41,16,8,162,17,15,1];
+	for (var i=0; i<arr.length-1; i++) 
+	{
+	//外层循环控制的是趟数
+		for (var j=0; j<arr.length-i;j++ )
+		 {
+			//控制的是每一趟比较的次数(个数-趟数)
+			if (arr[j]>arr[j+1])
+			{
+				var temp=arr[j];
+				arr[j]=arr[j+1];
+				arr[j+1]=temp;
+			}
+		}
+		
+
+	} 
+	//console.log(arr);
+
+	//选择排序法  指定最小值
+	var arr1=[2,5,8,4,6,484,1,48,2,69,77];
+	//交换第一轮 2,5
+	for(var a=0; a<arr1.length;a++ ){
+		//外层循环便于指定每个值分别为最小值的情况
+		var min=arr1[a];//定义变量存放指定的最小值
+		var index=a;//定义变量存放指定的最小值的下标
+		for(var b=a+1;b<arr1.length; b++){
+			//内层循环是用来寻找真正的最小值
+			if(min>arr1[b]){
+				min=arr1[b];
+				index=b;
+			}
+		}
+		arr1[index]=arr1[a];
+		arr1[a]=min;
+	}
+	console.log(arr1);
+
+	 //console.log(arr);
+	// var arr1=[];
+	// for(var i=0;i<=arr.length-1;i++)
+	// {
+	// 	var b5=arr[i]*5;
+	// 	//将扩大的数据存放到新数组
+	// 	arr1.push(b5);
+	// }
+	// console.log(arr1);
+</script>
+</html>

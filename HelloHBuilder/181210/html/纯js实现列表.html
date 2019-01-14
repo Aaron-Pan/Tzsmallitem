@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="box">
+		
+	</div>
+</body>
+<script type="text/javascript">
+	var oBox=document.querySelector("#box");
+	oBox.style.margin="100px auto";
+	oBox.style.width="400px";
+	oBox.style.height="500px";
+
+
+	for(var i = 0; i< 6;i++){
+		var oH=document.createElement("p");
+		var txt=document.createTextNode("我是行");
+		oH.appendChild(txt);
+		
+		oBox.appendChild(oH);
+	}
+	var oHfour=document.querySelectorAll("p");
+	
+	for(var i = 0; i< 6;i++)
+	{
+		oHfour[i].style.borderRadius="5px";
+		oHfour[i].style.height="50px";
+		oHfour[i].style.lineHeight="50px";
+		oHfour[i].style.textAlign="center";
+		oHfour[i].style.fontWeight="bold";
+		oHfour[i].style.boxShadow="0 3px 20px 2px #999999";
+		if(i%2==0){
+		oHfour[i].style.background="#cccccc";
+		}
+		else{
+			oHfour[i].style.background="#ffffff";
+		}
+	}
+	// console.log(oHfour);
+    for(let j=0; j<oHfour.length;j++)
+    {
+    	oHfour[j].onmouseover = function()
+    	{
+    		// alert("a");
+    		for (let k=0;k<oHfour.length;k++) {
+    			if(k%2==0){
+		oHfour[k].style.background="#cccccc";
+		}
+		else{
+			oHfour[k].style.background="#ffffff";
+		}
+	
+    		}
+    		this.style.background="yellow";
+    	}
+    }
+
+	 
+	
+</script>
+</html>

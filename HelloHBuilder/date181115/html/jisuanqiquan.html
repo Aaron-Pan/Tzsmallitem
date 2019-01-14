@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 499px;
+			height: 702px;
+			background: pink;
+			margin: 50px auto;
+		}
+		#kuang{
+			width: 497px;
+			height: 198px;
+			background: #666666;
+			font-size: 50px;
+			outline: none;
+			border: 1px solid black;
+			color: white;
+
+		}
+		.box1{
+			width: 499px;
+			height: 503px;
+			background: #666666;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+			align-content: space-between;
+		}
+		.box span{
+			width: 122px;
+			height: 81px;
+			background: #cccccc;
+			font-size: 20px;
+			text-align: center;
+			border: 1px solid #cccccc;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<input type="text" name="" id="kuang">
+	<div class="box1">
+		<span>mc</span>
+		<span>m+</span>
+		<span>m-</span>
+		<span>mr</span>
+		<span>AC</span>
+		<span><-</span>
+		<span>+/-</span>
+		<span>/</span>
+		<span>7</span>
+		<span>8</span>
+		<span>9</span>
+		<span>*</span>
+		<span>4</span>
+		<span>5</span>
+		<span>6</span>
+		<span>-</span>
+		<span>1</span>
+		<span>2</span>
+		<span>3</span>
+		<span>+</span>
+		<span style="width: 247px">0</span>
+		<span>.</span>
+		<span>=</span>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	// var a=document.getElementById("kuang");
+	var b=document.getElementsByTagName("span");
+	// console.log(b.innerHTML);
+	// console.log(b);
+		for(var i=0;i<b.length-1;i++){
+		b[i].index=i;
+		var content=b[i].innerHTML;
+		console.log(content);
+		b[i].onclick=function(){
+			
+			var indx=this.index;
+			document.getElementById("kuang").value=content;
+		}
+
+
+	}
+
+</script>
+</html>

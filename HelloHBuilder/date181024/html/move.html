@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width: 100%;
+				height: 300px;
+				
+			}
+			.im1{
+				float: left;
+			}
+			.im2{
+				float: right;
+			}
+			.center{
+				width: 1500px;
+				height: 700px;
+				
+			}
+			.move1{
+				width: 100px;
+				height: 60px;
+				margin: 50px 650px;
+				position: fixed;
+				z-index: 2;
+			}
+			.move1 img:hover  {
+				transform: translateX(300px);
+				transition: all 2s;
+			}
+			.move2{
+				width: 100px;
+				height: 60px;
+				margin: 50px 650px;
+				position: fixed;
+				z-index: 1;
+			}
+			.move2 img:hover  {
+				transform: translateY(300px);
+				transition: all 2s;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<img src="../img/timg.gif" class="im1"/>
+			<img src="../img/timg (1).gif" class="im2" />
+		</div>
+		<div class="center">
+			<div class="move1">
+			<img src="../img/timg (1).jpg" style="width: 250px; height: 150px;" />
+			</div>
+			<div class="move2">
+			<img src="../img/timg (1).jpg" style="width: 250px; height: 150px;" />
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.ig{
+			width: 80px;
+			height: 50px;
+			position: absolute;
+			top: 0px;
+			left: 0px;
+
+		}
+		.ig img{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body bgcolor="black">
+	<div class="ig">
+		<img src="../img/111.gif" width="100% " height="100%">
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var boDY=document.querySelector("body");
+	var arr=new Array();
+	var brr=new Array();
+	for(let j=0;j<10;j++)
+	{
+		var oImg=document.createElement("img")
+		oImg.src="../img/111.gif";
+		var Div=document.createElement("div");
+		Div.appendChild(oImg);
+		boDY.appendChild(Div);
+		Div.className="ig";
+	}
+	var Img=document.querySelectorAll(".ig");
+	document.onmousemove=function(evt){
+		var e= evt || window.event;
+		var x=e.clientX;
+		var y=e.clientY;
+		arr.unshift(x);
+		brr.unshift(y);
+	
+		for(let i=0;i<Img.length;i++)
+		{
+			Img[i].style.left=arr[i]+"px";
+			Img[i].style.top=brr[i]+"px";
+
+		}
+
+
+	}
+
+</script>
+</html>

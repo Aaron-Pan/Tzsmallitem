@@ -1,0 +1,220 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width: 500px;
+	height: 1000px;
+	background: pink;
+	margin: 0 auto;
+	z-index: -3;
+}
+.head{
+	width: 300px;
+	height: 300px;
+	border:1px solid black;
+	border-radius: 50%;
+	background: #10A7CF;
+	margin: 0 auto;
+	overflow: hidden;
+	z-index: 2;
+}
+.face{
+	width: 250px;
+	height: 230px;
+	border:1px solid black;
+	border-radius: 50%;
+	background: white;
+	margin: 70px auto;
+	z-index: 2;
+}
+.eye-left{
+	width: 60px;
+	height: 75px;
+	border:1px solid black;
+	background: white;
+	border-radius: 40%;
+	position: relative;
+	left: 68px;
+	top: -26px;
+	z-index: 2;
+}
+.eye-right{
+	width: 60px;
+	height: 75px;
+	border:1px solid black;
+	background: white;
+	border-radius: 40%;
+	position: relative;
+	left: 129px;
+	top: -102px;
+	z-index: 2;
+}
+.left{
+	width: 15px;
+	height: 15px;
+	background: black;
+	border-radius: 50%;
+	position: relative;
+	left: 38px;
+	bottom: -51px;
+}
+.right{
+	width: 15px;
+	height: 15px;
+	background: black;
+	border-radius: 50%;
+	position: relative;
+	right: -7px;
+	bottom: -50px;
+}
+.nose{
+	border: 1px solid black;
+	width: 32px;
+	height: 32px;
+	border-radius: 50%;
+	background: #C93C04;
+	position: relative;
+	left: 112px;
+	top: -112px;
+}
+.xian{
+	height: 110px;
+	width: 2px;
+	background: black;
+	position: relative;
+	left: 128px;
+	top: -112px;
+}
+.mouth{
+	height: 90px;
+	width: 150px;
+	/*background: black;*/
+	border-bottom: 3px solid black;
+	position: relative;
+	border-radius: 45%;
+	left: 55px;
+	top: -203px;
+	
+}
+.huzi1{
+	height: 2px;
+	width: 55px;
+	background: black;
+	position: relative;
+	left: 170px;
+	top: -132px;
+	z-index: 2;
+	
+}
+.huzi2{
+	height: 2px;
+	width: 55px;
+	background: black;
+	position: relative;
+	left: 286px;
+	top: -134px;
+	z-index: 2;
+	
+}
+.huzi3{
+	height: 2px;
+	width: 55px;
+	background: black;
+	position: relative;
+	transform: rotateZ(15deg);
+	left: 170px;
+	top: -154px;
+	z-index: 2;
+	
+}
+.huzi4{
+	height: 2px;
+	width: 55px;
+	background: black;
+	position: relative;
+	transform: rotate(-15deg);
+	left: 286px;
+	top: -154px;
+	z-index: 2;
+	
+}
+.huzi5{
+	height: 2px;
+	width: 55px;
+	background: black;
+	position: relative;
+	transform: rotate(15deg);
+	left: 286px;
+	top: -124px;
+	z-index: 2;
+	
+}
+.huzi6{
+	height: 2px;
+	width: 55px;
+	background: black;
+	position: relative;
+	transform: rotate(-15deg);
+	left: 170px;
+	top: -126px;
+	z-index: 2;
+	
+}
+.weijin{
+	width: 250px;
+	height: 30px;
+	border-radius: 40px 40px 40px 40px;
+	background: #C93C04;
+	border: 1px solid black;
+	position: relative;
+	z-index: 3;
+	left: 122px;
+	top: -43px;
+}
+.bozi{width: 244px;
+	height: 50px;
+	/*border: 1px solid black;*/
+	background: #08BAE8;
+	/*border-top: none;*/
+	position: relative;
+	left: 125px;
+	top: -45px;
+	
+	
+}
+.shenti{
+	width: 244px;
+	height: 150px;
+	border: 1px solid black;
+	background: #08BAE8;
+	border-top: none;
+	position: relative;
+	left: 125px;
+	top: -45px;
+	
+}
+.koudai{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	border-top: none;
+	background: white;
+	border: 1px solid black;
+	position: relative;
+	left: 50px;
+	top: -80px;
+	z-index: 2;
+}
+.s-koudai{
+	width: 120px;
+	height: 60px;
+	border-radius: 0 0 70px 70px;
+	border-top: none;
+	background: white;
+	border: 1px solid black;
+	position: relative;
+	left: 15px;
+	top: 63px;
+	z-index: 2;
+}

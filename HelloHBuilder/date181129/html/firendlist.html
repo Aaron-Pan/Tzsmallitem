@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+*{
+margin: 0;
+padding: 0;
+}
+#list{
+width: 200px;		
+margin: 50px auto;
+background: white;
+
+
+}
+ul,li,h2{
+list-style: none;
+text-indent: 20px;
+}
+.item li{
+/*border-bottom: 1px solid black;*/
+padding: 4px;
+}
+h2{
+font-size: 18px;
+background: url(../img/left.png)no-repeat;
+}
+.item{
+display: none;
+}
+.active{
+/*color: red;*/
+background: url(../img/b.png)no-repeat;
+}
+.names{
+background: yellow;
+}
+</style>
+</head>
+<body bgcolor="#eee">
+<ul id="list">
+<li>
+<h2>我的好友</h2>
+<ul class="item">
+<li>小明</li>
+<li>翠花</li>
+<li>小灰灰</li>
+</ul>
+</li>
+<li>
+<h2>高中同学</h2>
+<ul class="item">
+<li>花千骨</li>
+<li>白子画</li>
+<li>杀阡陌</li>
+</ul>
+</li>
+<li>
+<h2>我的死党</h2>
+<ul class="item">
+<li>小花</li>
+<li>张三</li>
+<li>林浅</li>
+</ul>
+</li>
+</ul>
+<script type="text/javascript">
+//获取大盒子ul
+var Oul=document.getElementById("list");
+//获取h2
+var Oh2=document.getElementsByTagName("h2");
+//获取每一项 ul 
+var item=Oul.getElementsByTagName("ul");
+//定义空数组装每一项item
+// var itemList=[];
+for(var i=0;i<Oh2.length;i++){		
+// itemList.push(item[i]);
+//给每个h2添加点击事件 存下标
+Oh2[i].index=i;
+
+Oh2[i].onclick=function(){	
+//取下标
+var that=this.index;
+//循环所有的ul，只展开一个
+for(var j=0;j<item.length;j++){	
+if(j!=that){
+//隐藏ul下标与h2下标不匹配的ul列表
+item[j].style.display="none"
+}else{
+//如果当前ul是关闭的，则展开，否则关闭
+//如果类名为空，item每一项就显示
+if (this.className=="") {
+	item[that].style.display="block";
+	Oh2[that].className="active";
+}else{
+	item[that].style.display="none";
+	Oh2[that].className="";
+}
+}
+}
+}
+}
+//给每个li添加点击事件
+var liArr=[];
+for(var a=0;a<item.length;a++){
+//循环ul.item 收集所有ul下的li放到liArr里，并给所有的li添加点击事件
+var ali=item[a].getElementsByTagName("li");
+for(var b=0;b<ali.length;b++){
+liArr.push(ali[b]);
+ali[b].onclick=function(){
+	for(var c=0;c<liArr.length;c++){
+		if (liArr[c]!=this) {
+			liArr[c].className=""
+		}
+	}	
+	if (this.className=="") {
+		this.className="names"
+	}else{
+		this.className="";
+	}
+}
+}
+}
+
+</script>
+</body>
+</html>

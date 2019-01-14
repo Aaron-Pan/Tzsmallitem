@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.img{
+				width: 500px;
+				height: 500px;
+				border: 1px solid black;
+				margin: 20px auto;
+				border-radius: 50%;
+				/*线性渐变*/
+				/*background: linear-gradient(90deg,blue 10%,red 5%,20%,yellow 15%,30%,brown 25%,40%,green 35%,50%,pink 45%,60%,red 55%,70%,blue 65%,80%,skyblue 75%,90%,gold -10%);*/
+			
+				background: linear-gradient(90deg,black 10%,50%,white -50%);
+				animation: change 20s 0s infinite;
+			}
+			.top{
+				width: 250px;
+				height: 250px;
+				background: #000000;
+				margin-left: 125px;
+				border-radius: 50%;
+				overflow: hidden;
+			}
+			.bottom{
+				width: 250px;
+				height: 250px;
+				background: white;
+				margin-left: 125px;
+				overflow: hidden;
+				border-radius: 50%;
+			}
+			.small{
+				width: 50px;
+				height: 50px;
+				background: #FFFFFF;
+				margin: 100px auto;
+				border-radius: 50%;
+			}
+			.big{
+				width: 50px;
+				height: 50px;
+				background: #000000;
+				margin: 100px auto;
+				border-radius: 50%;
+			}
+			@keyframes change{
+				from{
+					width: 500px;
+				height: 500px;
+				border: 1px solid black;
+				margin: 20px auto;
+				border-radius: 50%;
+				/*线性渐变*/
+				/*background: linear-gradient(90deg,blue 10%,red 5%,20%,yellow 15%,30%,brown 25%,40%,green 35%,50%,pink 45%,60%,red 55%,70%,blue 65%,80%,skyblue 75%,90%,gold -10%);*/
+			
+				background: linear-gradient(90deg,black 10%,50%,white -50%);
+				
+				}
+				to{
+					width: 500px;
+				height: 500px;
+				border: 1px solid black;
+				margin: 20px auto;
+				border-radius: 50%;
+				/*线性渐变*/
+				/*background: linear-gradient(90deg,blue 10%,red 5%,20%,yellow 15%,30%,brown 25%,40%,green 35%,50%,pink 45%,60%,red 55%,70%,blue 65%,80%,skyblue 75%,90%,gold -10%);*/
+			
+				background: linear-gradient(90deg,black 10%,50%,white -50%);
+				transform: rotateZ(720deg);
+			
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="img">
+			<div class="top">
+				<div class="small"></div>
+			</div>
+			<div class="bottom">
+				<div class="big"></div>
+			</div>
+		</div>
+	</body>
+</html>

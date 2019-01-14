@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.box{
+			width: 800px;
+			height: 300px;
+			margin: 200px auto;
+			border: 1px solid black;
+		
+
+		}
+		.left{
+			width: 300px;
+			height: 300px;
+			float: left;
+			overflow-y:scroll; 
+			border: 1px solid black;
+			list-style: none;
+			font-size: 18px;
+		}
+		
+		.right{
+			width: 300px;
+			height: 300px;
+			float: right;
+			overflow-y: scroll;
+			border: 1px solid black;
+			list-style: none;
+			text-align: right;
+			font-size: 18px;
+		}
+		.center{
+			width: 100px;
+			height: 290px;
+			float: left;
+			margin-left: 50px;
+			border: 5px double gold;
+		}
+		button{
+			width: 80px;
+			height: 40px;
+			margin: 5px 10px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<select class="left" size="8" multiple="multiple">
+		<option value="">上海</option>
+		<option value="">北京</option>
+		<option value="">贵阳</option>
+		<option value="">深圳</option>
+		<option value="">广东</option>
+		<option value="">开阳</option>
+	</select>
+	
+	<div class="center">
+		<button class="toRight"> -> </button>
+		<button class="allToright"> >>> </button>
+		<button class="toLeft"> <- </button>
+		<button class="allToleft"> <<< </button>
+	</div>
+	<select class="right" size="8" multiple="multiple">
+</select>
+</div>
+</body>
+<script type="text/javascript">
+	var oseLeft=document.querySelector(".left");
+	var oseRight=document.querySelector(".right");
+	var otoRight=document.querySelector(".toRight");
+	var otoAllright=document.querySelector(".allToright");
+	var otoLeft=document.querySelector(".toLeft");
+	var otoAllleft=document.querySelector(".allToleft");
+	// 给单独向右添加点击事件
+	otoRight.onclick=function(){
+		// 扫描左边下拉框中的所有被选中的项目
+
+		for(var i=oseLeft.options.length-1;i>=0;i--)
+		{
+			// 判断扫描中被选中的项
+			if (oseLeft.options[i].selected ) {
+				// 将选中的项添加到右边框中
+				oseRight.appendChild(oseLeft.options[i]);
+			}
+		}
+	}
+	otoLeft.onclick=function(){
+		// 扫描左边下拉框中的所有被选中的项目
+
+		for(var i=oseRight.options.length-1;i>=0;i--)
+		{
+			// 判断扫描中被选中的项
+			if (oseRight.options[i].selected ) {
+				// 将选中的项添加到右边框中
+				oseLeft.appendChild(oseRight.options[i]);
+			}
+		}
+	}
+	otoAllright.onclick=function(){
+		for(var i=oseLeft.options.length-1;i>=0;i--)
+		{
+				oseRight.prepend(oseLeft.options[i]);
+			
+		}
+	}
+	otoAllleft.onclick=function(){
+		for(var i=oseRight.options.length-1;i>=0;i--)
+		{
+			
+				oseLeft.prepend(oseRight.options[i]);
+			
+		}
+	}
+</script>
+</html>

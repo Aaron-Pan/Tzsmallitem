@@ -1,0 +1,703 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.box{
+	width:1600px;
+	height: 40px;
+	background: #F8E3DF;
+}
+.box1{
+	width: 1182px;
+	height: 40px;
+	margin: 0 auto;
+}
+.box-left{
+	width: 400px;
+	height: 40px;
+	float: left;
+/*	background: #CCCCCC;*/
+	
+}
+.box-right{
+	width: 520px;
+	height: 40px;
+	float: right;
+	/*background: #CCCCCC;*/
+	
+}
+.zi{
+	font-size: 14px;
+	display: block;
+	float: left;
+	margin: 0 10px;
+	text-decoration: none;
+	line-height: 40px;
+	color: black;
+}
+.youzi{
+	width: 119px;
+	height: 40px;
+	float: left;
+	margin-left:1px ;
+/*	overflow: hidden;*/
+}	
+.box-right a{
+	padding: 12px 0;
+	line-height: 40px;
+	margin: 0 15px;
+	text-decoration: none;
+	color: black;
+	font-size: 14px;
+}
+.ss{
+	width: 200px;
+	height: 100px;
+	font-size: 14px;
+	line-height: 100px;
+	
+	text-align: center;
+	display: none;
+}
+.youzi:hover div{
+	display: block;
+	border: 0.5px solid pink;
+	background: white;
+	border-top: none;
+	
+}
+.youzi:hover {
+	color: hotpink;
+	background: white;
+	border: 0.5px solid pink;
+	border-bottom: none;
+}
+.youzi:hover a{
+	color: hotpink;
+}
+.ii{
+	width: 100px;
+	height: 40px;
+	float: left;
+}
+.ii:hover p{
+	display: block;
+	
+	background: white;
+	
+}
+.ii p{
+	overflow: hidden;
+	
+	display: none;
+	font-size: 14px;
+	line-height: 40px;
+	color: black;
+	margin-left: 15px;
+	background: red;
+}
+.ii p:hover {
+	color: hotpink;
+	}
+/*logo*/
+.b-box{
+	
+	width: 1600px;
+	height: 150px;
+	background: #FBF2F1;
+}
+.bb{
+	width: 1182px;
+	height: 150px;
+
+	margin: 0 auto;
+}
+.left{
+	width: 500px;
+	height: 150px;
+	float: left;
+	
+}
+.right{
+	width: 450px;
+	height: 150px;
+	float: right;
+
+}
+.kuang{
+	width: 200px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin: 50px 20px;
+	float: left;
+	
+}
+.box2{
+	width:1600px;
+	height: 40px;
+	background: #909090;
+}
+.box3{
+	width: 1182px;
+	height: 40px;
+	margin: 0 auto;
+}
+.tt{
+	width: 630px;
+	height: 40px;
+
+	float: left;
+}
+
+.lie{
+	list-style: none;
+}
+.lie li {
+	width: 90px;
+	height: 40px;
+	float: left;
+}
+.lie a{
+	display: block;
+	text-decoration: none;
+	line-height: 40px;
+	text-align: center;
+	font-size: 13px;
+	color:white;
+}
+.dd{
+	width: 270px;
+	height: 40px;
+	float: right;
+	
+	
+}
+.li{
+	list-style: none;
+}
+.li li {
+	width: 90px;
+	height: 40px;
+	float: left;
+}
+.li a{
+	display: block;
+	text-decoration: none;
+	line-height: 40px;
+	text-align: center;
+	font-size: 13px;
+	color: white;
+}
+.bbox{
+	display: none;
+	width: 1600px;
+	height: 350px;
+	background: white;
+	margin-left: -299px ;
+	
+}
+.bbox2{
+	display: none;
+	width: 1600px;
+	height: 350px;
+	background: white;
+	margin-left: -479px ;
+	
+}
+.bbox1{
+	display: none;
+	width: 1600px;
+	height: 350px;
+	background: white;
+	margin-left: -389px ;
+}
+.lie a:hover {
+
+	background: #F8E3DF;
+}
+.li a:hover{
+	background: #F8E3DF;
+}
+.lie li:hover div{
+	display: block;
+	
+}
+.lee{
+	margin-left: 209px;
+	margin-top: 25px;
+	width: 591px;
+	height: 300px;
+	float: left;
+	
+}
+.rig{
+	margin-top:25px;
+	width: 591px;
+	height: 300px;
+	float: left;
+	
+}
+.b-le{
+	width: 350px;
+	height: 300px;
+	
+	float: left;
+}
+
+.b-le p{
+	font-size: 13px;
+	margin-top: 10px;
+	margin-left: 25px;
+	color: black;
+	cursor: pointer;
+}
+.b-ri p{
+	font-size: 13px;
+	margin-top: 10px;
+	margin-left: 25px;
+	color: black;
+	cursor: pointer;
+}
+.fff{
+	width: 141px;
+	height: 200px;
+	
+
+	float: right;
+	
+}
+.b-ri{
+	width: 200px;
+	height: 200px;
+	float: left;
+	
+	margin-top: 68px;
+}
+.box5{
+	width: 1600px;
+	height: 600px; 
+	z-index: -1;
+	background: url(../img/67f397c1a9f648dc34a171e51e23d2a5.jpg);
+}
+/*中间部分的开始  设计订婚戒指*/
+.start{
+	margin: 54px auto 0px;
+	width: 1180px;
+	height: 445px;
+	/*background: #909090;*/
+}
+.start_left{
+	text-align: center;
+	width: 600px;
+	height: 100%;
+	float: left;
+}
+.start_left p{
+	line-height: 124px;
+	font-size: 24px;
+}
+.start_left button{
+	margin-top: 12px;
+	border: none;
+	outline: none;
+	margin-left: 197px;
+	width: 206px;
+	height: 34px;
+	font-size: 12px;
+	color: white;
+	display: block;
+	background: #f6827a;
+}
+.start_right{
+	float: right;
+}
+
+
+/*中间部分的系列产品的样式*/
+.series_product{
+	margin: 60px auto 0px;
+	height: 846px;
+	width: 1180px;
+	overflow: hidden;
+	text-align: center;
+	
+}
+.series_product p{
+	font-size: 20px;
+	line-height: 23px;
+}
+
+.product_menu{
+	margin-top: 50px;
+	height: 38px;
+	width: 1180px;
+	background: #FDB2A4;
+	position: relative;
+}
+
+.product_item{
+	
+	list-style: none;
+	float: left;
+	width: 110px;
+	height: 38px;
+}
+.product_item a{
+	color: white;
+	line-height: 38px;
+	font-size: 12px;
+	text-decoration: none;
+}
+.product_first{
+	position: relative;
+	left: 330px;
+}
+   /*鼠标悬停效果,文字变换颜色*/
+.product_item a:hover{
+	color: #333333;
+}
+  /*鼠标悬停效果,调用二级菜单*/
+.product_item:hover .product_second{
+	display: block;
+}
+ /*推荐的二级菜单*/
+.product_secoud{
+	position: absolute;
+	left: 0px;
+	top: 38px;
+	/*display: none;*/
+	width: 1180px;
+	height: 736px;
+}
+.product_secoud img{
+	margin-top: 10px;
+}
+.product_secoud_left{
+	float: left;
+	width: 700px;
+	height: 736px;
+}
+.product_secoud_right{
+	width: 466px;
+	float: right;
+	height: 736px;
+	
+}
+
+/*婚戒推荐 全球美钻*/
+.recommend{
+	margin: 0 auto;
+	width: 1180px;
+	height: 495px;
+}
+.recommend_title{
+	text-align: center;
+	line-height: 120px;
+	font-size: 20px;
+}
+.recommend_img li{
+	float: left;
+	list-style: none;
+	padding: 50px 26px;
+}
+/*鼠标点击实现动态效果*/
+.recommend_img li:hover{
+	transform: translateY(-15px);
+	transition: all 1s; 
+}
+
+/*品牌故事*/
+.brand{
+	margin: 110px auto 38px;
+	height: 985px;
+	width: 1180px;
+}
+.brand_top img{
+	float: left;
+}
+.brand_bottom img{
+	margin-top: 16px;
+}
+/*水平线*/
+.line{
+	margin: 0 auto;
+	color: #333333;
+	width: 1180px;
+}
+
+/*体验中心*/
+.exploration{
+	overflow: hidden;
+	margin: 0 auto;
+	height: 700px;
+	width: 1180px;
+	
+}
+.exploration_nav{
+	margin: 0 auto;
+	padding: 16px 0;
+	height: 48px;
+	width: 1180px;
+	background: white;
+}
+.exploration_nav p{
+	display: block;
+	height: 48px;
+	width: 108px;
+	line-height: 48px;
+	color: #bababa;
+	font-size: 12px;
+	float: left;
+}
+.exploration_nav ul li{
+	list-style: none;
+	float: left;
+	line-height: 24px;
+	font-size: 12px;
+	padding: 0 20px;
+}
+.exploration_nav a{
+	text-decoration: none;
+	color: black;
+}
+/*体验中心省份鼠标点击实现改变字体颜色*/
+.exploration_nav a:hover{
+	color: #F6827A;
+}
+
+
+.exploration_meun{
+	margin: 0 auto;
+	padding: 16px 0;
+	height: 48px;
+	width: 1180px;
+	background: white;
+}
+.exploration_meun p{
+	display: block;
+	height: 48px;
+	width: 108px;
+	line-height: 48px;
+	color: #bababa;
+	font-size: 12px;
+	float: left;
+}
+.exploration_meun a{
+	float: left;
+	line-height: 24px;
+	font-size: 12px;
+	padding: 0 20px;
+	text-decoration: none;
+	color: black;
+}
+
+/*体验中心门店鼠标点击实现改变字体颜色*/
+.exploration_meun a:hover{
+	color: #F6827A;
+}
+.exploration_left{
+	float: left;
+	height: 532px;
+	width: 700px;
+}
+.exploration_right{
+	text-align: center;
+	float: right;
+	height: 531px;
+	width: 480px;
+	background: #fdeaea;
+}
+.exploration_title{
+	margin-top: 110px;
+	font-size: 22px;
+	margin-bottom: 40px;
+}
+.exploration_right hr{
+	margin:20px auto ;
+	width: 60px;
+	color: #000000;
+}
+.exploration_p{
+	font-size: 12px;
+	line-height: 22px;
+}
+.exploration_right input{
+	display: block;
+	padding: 0 10px;
+	margin: 55px auto 0px;	
+	border: none;
+	outline: none;
+	background: white;
+	height: 38px;
+	width: 290px;
+}
+.exploration_right button{
+	width: 142px;
+	height: 30px;
+	margin: 32px auto 0px;
+	background: #F6827A;
+	color: white;
+	border: none;
+	outline: none;
+	font-size: 12px;
+}
+
+/*群星定制*/
+.made{
+	margin: 40px auto 0px;
+	height: 330px;
+	width: 1180px;
+	
+}
+.made_title{
+	font-size: 12px;
+	margin-top: 40px;
+	margin-bottom: 10px;
+	line-height: 30px;
+	font-weight: 550;
+}
+.made_p{
+	font-size: 12px;
+	margin-top: 20px;
+	line-height: 30px;
+}
+/*鼠标点击改变字体颜色*/
+.made_p:hover{
+	cursor: pointer;
+	color: #fdb2a4;
+}
+
+.made_left{
+	width: 660px;
+	height: 330px;
+	float: left;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.made_left1{
+	width: 290px;
+	float:left;
+	padding: 0 20px;
+	font-size: 12px;
+}
+.made_left1 li{
+	line-height: 30px;
+	list-style: none;
+	font-size: 12px;
+}
+/*鼠标点击改变字体颜色*/
+.made_left1 li:hover{
+	cursor: pointer;
+	color: #fdb2a4;
+}
+.made_left2{
+	width: 290px;
+	float:left;
+	padding: 0 20px;
+	font-size: 12px;
+}
+.made_left2 li{
+	line-height: 30px;
+	list-style: none;
+	font-size: 12px;
+}
+/*鼠标点击改变字体颜色*/
+.made_left2 li:hover{
+	
+	cursor: pointer;
+	color: #fdb2a4;
+}
+.made_right{
+	float: right;
+}
+.last-box{
+	width: 1600px;
+	height: 480px;
+	margin: 40px auto;
+	background: #FDF2EC;
+}
+.last{
+	width: 1180px;
+	height: 350px;
+	margin:0 auto;
+	
+}
+.last-bottom{
+	width: 1180px;
+	height: 150px;
+	margin-top: 20px;
+	
+}
+.font-one{
+	width: 150px;
+	height: 150px;
+	
+	float: left;
+}
+.font-one a{
+	font-size: 13px;
+	line-height: 24px;
+	text-decoration: none;
+	margin-left: 50px;
+	color: #BABABA;
+}
+.font-two{
+	width: 757px;
+	height: 30px;
+	margin: 30px auto 0px;
+}
+.font-two a{
+	font-size: 12px;
+	margin-left: 10px;
+	float: left;
+	line-height: 30px;
+	color:  #BABABA;
+	text-decoration: none;
+}
+.font-two p{
+	margin-left: 10px;
+	float: left;
+	font-size: 13px;
+	line-height: 30px;
+	color:  #BABABA;
+}
+.font-tre{
+	width: 300px;
+	height: 30px;
+	margin: 0 auto;
+}
+.font-tre a{
+	font-size: 12px;
+	margin-left: 10px;
+	float: left;
+	line-height: 30px;
+	color:  #BABABA;
+	text-decoration: none;
+}
+.font-tre p{
+	margin-left: 10px;
+	float: left;
+	font-size: 13px;
+	line-height: 30px;
+	color:  #BABABA;
+}
+.font-four{
+	width: 1084px;
+	height: 30px;
+	margin: 0 auto;
+}
+.font-four a{
+	font-size: 12px;
+	margin-left: 10px;
+	float: left;
+	line-height: 30px;
+	color:  #BABABA;
+	text-decoration: none;
+}
+.font-four p{
+	margin-left: 10px;
+	float: left;
+	font-size: 13px;
+	line-height: 30px;
+	color:  #BABABA;
+}

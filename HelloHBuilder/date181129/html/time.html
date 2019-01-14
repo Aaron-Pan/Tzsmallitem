@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			margin: 20px auto;
+			width: 500px;
+			height: 160px;
+			background: linear-gradient(90deg,skyblue,lightblue);
+			overflow: hidden;
+		}
+		.hour{
+			width: 80px;
+			height:80px;
+			margin:40px 0px 40px 50px;
+			float: left;
+	
+		}
+		.hour p{
+			font-size: 40px;
+			line-height: 80px;
+			text-align: center;
+			font-weight: bold;
+
+		}
+		.minute{
+			width: 80px;
+			height:80px;
+			float: left;
+			margin-top:40px; 
+	
+		}
+		.zhongjian{
+			float: left;
+			font-size: 40px;
+			margin-top:50px;
+		}
+		.minute p{
+			font-size: 40px;
+			line-height: 80px;
+			text-align: center;
+			font-weight: bold;
+
+		}
+		.secon{
+			width: 50px;
+			height: 50px;
+		
+			float: left;
+			margin-top: 70px;
+		}
+		.secon p{
+			font-size: 20px;
+			line-height: 80px;
+			text-align: center;
+
+		}
+		.week{
+			width: 150px;
+			height: 60px;
+	
+			float: left;
+			margin-top:50px; 
+			margin-left: 30px;
+		}
+		.week p{
+			font-size: 40px;
+			line-height: 60px;
+			text-align: center;
+			color: yellow;
+
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="hour">
+		<p id="hou"></p>
+	</div>
+	<p class="zhongjian">:</p>
+	<div class="minute">
+		<p id="min"></p>
+	</div>
+	<div class="secon">
+		<p id="s"></p>
+	</div>
+	<div class="week">
+		<p id="wee"></p>
+	</div>
+</div>
+</body>
+<script type="text/javascript">
+	setInterval(function time(){var t=new Date();
+	
+	var b=t.getHours();
+	if(b<10)
+	{
+		b="0"+b;
+	}
+	document.getElementById("hou").innerHTML=b;
+	var a=t.getMinutes();
+	if(a<10)
+	{
+		a="0"+a;
+	}
+	document.getElementById("min").innerHTML=a;
+	var c=t.getSeconds();
+	if(c<10)
+	{
+		c="0"+c;
+	}
+	document.getElementById("s").innerHTML=c;
+
+	var f=t.getDay();
+	switch(f)
+	{
+		case 1:document.getElementById("wee").innerHTML="星期一";break;
+		case 2:document.getElementById("wee").innerHTML="星期二";break;
+		case 3:document.getElementById("wee").innerHTML="星期三";break;
+		case 4:document.getElementById("wee").innerHTML="星期四";break;
+		case 5:document.getElementById("wee").innerHTML="星期五";break;
+		case 6:document.getElementById("wee").innerHTML="星期六";break;
+		case 7:document.getElementById("wee").innerHTML="星期天";break;
+	}},1000)
+	
+	
+</script>
+</html>

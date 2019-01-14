@@ -1,0 +1,238 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+.top{
+	width: 100%;
+	height: 100px;
+	background: #01164B;
+	
+}
+.inbox{
+	width: 1200px;
+	height: 100px;
+	margin: 0 auto;
+	
+}
+.one{
+	width: 100%;
+	height: 40px;
+	background: #142D68;
+	border-bottom: 1px solid #01164B;
+}
+.item{
+	width: 1200px;
+	height: 40px;
+	margin: 0 auto;
+
+}
+.item li{
+	width: 109px;
+	height: 40px;
+
+	list-style: none;
+	float: left;
+	text-align: center;
+	cursor: pointer;
+}
+.item a{
+	color: white;
+	line-height: 40px;
+	text-decoration: none;
+	
+}
+.second{
+	height: 0px;
+	overflow: hidden;
+	background: #142D68;
+	font-size: 12px;
+	line-height: 36px;
+	text-align: center;
+}
+.banner{
+	width: 1200px;
+	height: 450px;
+	margin: 0 auto;
+	background: red;
+	position: relative;
+	z-index: -1;
+	overflow: hidden;
+}
+.img{
+	width: 100%;
+	height: 100%;
+	
+}
+.left{
+	width: 48px;
+	height: 70px;
+	position: absolute;
+	background: red;
+	top: 190px;
+	cursor: pointer;
+}
+.right{
+	width: 48px;
+	height: 70px;
+	position: absolute;
+	background: red;
+	top: 190px;
+	right: 0px;
+	cursor: pointer;
+}
+.font{
+	width: 1200px;
+	height: 850px;
+	background: white;
+	overflow: hidden;
+	margin: 0 auto ;
+}
+.font-left{
+	width: 750px;
+	height: 350px;
+	margin: 30px;
+	background: #E7E6E6;
+	float: left;
+}
+.font-right{
+	width: 302px;
+	height: 342px;
+	margin-top: 38px;
+	border-radius: 5px;
+	background: #EDEDED;
+	float: left;
+	margin-left: 60px;
+}
+.kuang{
+	width: 700px;
+	height: 338px;
+	margin-top: 7px;
+	margin-left: 15px;
+
+}
+.k-top{
+	width: 700px;
+	height: 33px;
+
+}
+.xian{
+	width: 700px;
+	height: 2px;
+	background: #5E5E5E;
+}
+.left-font{
+	width: 500px;
+	height: 298px;
+	margin-top: 5px;
+
+	float: left;
+}
+.ff{
+	width: 500px;
+	height: 27px;
+}
+.ff p{
+	float: left;
+	line-height: 27px;
+	font-size: 15px;
+	cursor: pointer;
+	
+}
+.ff p:hover{
+	color: red;
+}
+.right-font{
+	width: 100px;
+	height: 298px;
+	margin-top: 5px;
+	
+	float: right;
+}
+.right-font p{
+	line-height: 27px;
+	
+}
+.boxtwo{
+	width: 198px;
+	height: 38px;
+	border: 1px solid #01164B;
+	background: white;
+	margin: 20px auto;
+}
+.boxtwo p{
+	line-height: 38px;
+	float: left;
+	color: #01164B;
+	font-size: 18px;
+}
+.last-box{
+	width: 350px;
+	height: 425px;
+
+	margin: 15px 25px 5px 25px;
+	float: left;
+}
+.img1{
+	width: 350px;
+	height: 216px;
+	
+}
+.last-center{
+	width: 350px;
+	height: 40px;
+
+}
+.xian1{
+	width: 350px;
+	height: 1px;
+	background: #cccccc;
+}
+.last-font{
+	width: 350px;
+	height: 163px;
+
+}
+.left-f{
+	margin-top: 5px;
+	
+	height: 163px;
+	width: 260px;
+	float: left;
+
+}
+.right-f{
+	margin-top: 5px;
+	height: 163px;
+	width: 65px;
+	float: right;
+	
+}
+.right-f p{
+	font-size: 12px;
+	line-height: 23px;
+}
+.k p{
+	width: 242px;
+	white-space:nowrap;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	font-size: 12px;
+	line-height: 22px;
+	float: left;
+	cursor: pointer;
+	
+}
+.k p:hover{
+	color: red;
+}
+.k{
+	width: 260px;
+	height: 23px;
+}
+.foot{
+	width: 100%;
+	height: 80px;
+	margin-top: 50px;
+	background: #01164B;
+	text-align: center;
+}

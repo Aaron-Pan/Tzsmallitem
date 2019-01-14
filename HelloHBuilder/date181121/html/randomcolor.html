@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0
+		}
+		#name{
+			width: 100%;
+			height: 2000px;
+			background: pink;
+			margin: 0 auto;
+		}
+	</style>
+</head>
+<body>
+	<div id="name"></div>
+</body>
+<script type="text/javascript">
+	window.onload=function(){
+		var back=document.getElementById("name");
+		
+	
+	
+		back.onclick=function(){
+			var a=["0","1","2","3","4","5","6","7","8","9","A","B","C","D","E","F"];
+		
+		
+			var sum;
+	
+			var d=Math.floor(Math.random()*16);
+			var j=Math.floor(Math.random()*16);
+			var k=Math.floor(Math.random()*16);
+			var l=Math.floor(Math.random()*16); 
+			var o=Math.floor(Math.random()*16);
+			var u=Math.floor(Math.random()*16);
+			// console.log(d);
+			sum="#"+a[d]+a[j]+a[k]+a[l]+a[o]+a[u];
+			console.log(sum);
+			back.style.background=sum; 
+		}
+
+	}
+</script>
+</html>

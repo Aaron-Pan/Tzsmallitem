@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		h1{
+			text-align: center;
+		}
+		.lists{
+			width: 400px;
+			margin: 100px auto;
+		}
+		.lists li{
+			width: 380px;
+			margin: 10px;
+			height: 50px;
+			border:1px solid black;
+			list-style: none;
+			line-height: 50px;
+			font-size: 24px;
+		}
+		input{
+			width: 300px;
+			height: 40px;
+			margin: 10px;
+			font-size: 20px;
+		}
+	</style>
+</head>
+<body>
+	<h1>这是一个可以及时编辑的列表</h1>
+	<ul class="lists">
+		<li>你好</li>
+		<li>我好</li>
+		<li>大家好</li>
+	</ul>
+</body>
+<script type="text/javascript">
+	var aLi = document.querySelectorAll(".lists li");
+	for( let i = 0; i < aLi.length ; i++ ){
+		aLi[i].onclick = function(){
+			this.innerHTML = `<input value="${this.innerHTML}" onclick="stop(event)"  onblur="save(this)">`
+			// console.log(1111)
+			
+		}
+	}
+
+	function stop(evt){
+		evt.stopPropagation(); 
+	 //阻止非IE浏览器事件冒泡
+	}
+	function save(obj){
+		obj.outerHTML = obj.value;
+	}
+</script>
+</html>

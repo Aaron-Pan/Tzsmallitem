@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 200px;
+			height: 30px;
+			margin: 0 auto;
+			border: 1px solid black;
+			white-space:nowrap;
+			overflow:hidden;
+			text-overflow:ellipsis;
+
+		}
+		.kuang{
+			margin: 20px auto;
+			width: 100px;
+
+		}
+		#btn{
+			width: 100px;
+			height: 30px;
+			color: white;
+			background: red;
+			
+		}
+	</style>
+</head>
+<body>
+<div class="box">每个人都是一个个体，所以自己没钱的时候，不要总想着他人能够给予自己帮助！但是在我没钱的时候我希望大家都是兄弟！    ——鲁迅</div>
+<br>
+
+<div class="kuang"><button id="btn">显示所有内容</button></div>
+</body>
+<script type="text/javascript" >
+	var oBox=document.querySelector(".box");
+	var oBtn=document.querySelector("#btn");
+	var oFont=oBox.innerHTML;
+	console.log(oFont);
+	oBtn.onclick=function(){
+		var res=confirm(oFont);
+
+	}
+</script>
+</html>

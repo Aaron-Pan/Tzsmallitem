@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.screen{
+			width: 1200px;
+			height: 500px;
+			margin: 20px auto;
+			border:1px solid black;
+			position: relative;
+			overflow:hidden;
+		}
+		.box{
+			width: 100%;
+			height: 100%;
+		}
+		.imgBox{
+			width: 100%;
+			height: 100%;
+			list-style: none;
+			position: absolute;
+			opacity: 0;
+			transition:all 2s;
+		}
+		.imgBox img{
+			width: 100%;
+			height: 100%;
+		}
+		.btns{
+			width: 200px;
+			height: 20px;
+			/*background: red;*/
+			position: absolute;
+			bottom:5%;
+			right: 5%;
+			display: flex;
+			justify-content: space-between;
+		}
+		.btns span{
+			width: 20px;
+			height: 20px;
+			border:1px solid black;
+			text-align: center;
+			line-height: 20px;
+			background: rgba(255,255,0,.7);
+		}
+		.btns .active{
+			background: red;
+		}
+		.btnBox{
+			width: 1200px;
+			height: 50px;
+			position: absolute;
+			left: 0;
+			top: 50%;
+		}
+		.btnBox span{
+			width: 100px;
+			height: 50px;
+			text-align: center;
+			line-height: 50px;
+			background: rgba(0,0,0,.5);
+		}
+		.left{
+			float: left;
+		}
+		.right{
+			float: right;
+		}
+	</style>
+
+</head>
+<body>
+	<div class="screen">
+		<ul class="box">
+			<li style="opacity: 1;" class="imgBox"><img src="http://img0.imgtn.bdimg.com/it/u=1093182773,2381384281&fm=26&gp=0.jpg" alt=""></li>
+			<li class="imgBox"><img src="http://img4.imgtn.bdimg.com/it/u=3123864243,3291356489&fm=26&gp=0.jpg" alt=""></li>
+			<li class="imgBox"><img src="http://img2.imgtn.bdimg.com/it/u=429504720,2777395442&fm=26&gp=0.jpg" alt=""></li>
+			<li class="imgBox"><img src="http://img0.imgtn.bdimg.com/it/u=3998307711,221976393&fm=26&gp=0.jpg" alt=""></li>
+			<li class="imgBox"><img src="http://img5.imgtn.bdimg.com/it/u=148777063,3972538444&fm=26&gp=0.jpg" alt=""></li>
+		</ul>
+		<div class="btns">
+			<span data-index="0" class="active">1</span>
+			<span data-index="1">2</span>
+			<span data-index="2">3</span>
+			<span data-index="3">4</span>
+			<span data-index="4">5</span>
+		</div>
+
+		<div class="btnBox">
+			<span class="left">向左</span>
+			<span class="right">向右</span>
+		</div>
+
+	</div>
+</body>
+<script type="text/javascript">
+var oScreen = document.querySelector(".screen");
+var oImgs = document.querySelectorAll(".imgBox");
+var oBtns = document.querySelectorAll(".btns span");
+var oLeft = document.querySelector(".left");
+var oRight = document.querySelector(".right")
+var index = 0;
+var timer;
+
+function changeImg(currentIndex){
+	index = currentIndex;
+	// 检测右边界
+	if( index >= oImgs.length ){
+		index = 0
+	}
+	//检测左边界
+	if( index <= -1 ){
+		index = oImgs.length-1 
+	}
+	for(let i = 0 ; i < oImgs.length ; i++){
+		oImgs[i].style.opacity = "0" 
+		// oImgs[i].style.transform = "rotate(-360deg)"
+		oBtns[i].setAttribute("class","");
+	}
+	oImgs[index].style.opacity = "1"
+	// oImgs[index].style.transform = "rotate(360deg)"
+	oBtns[index].setAttribute("class","active");
+}
+
+for( let i = 0 ; i < oBtns.length ; i++ ){
+	oBtns[i].onclick = function(){
+		changeImg(i)
+		console.log(index)
+	}
+}
+
+function autoPlay(){
+	timer = setInterval(function(){
+		index++
+		changeImg(index)
+	},4000)
+}
+
+autoPlay()
+
+// 左右按钮的点击事件
+oRight.onclick = function(){
+	index++
+	console.log(index)
+	
+	changeImg(index)
+}
+
+oLeft.onclick = function(){
+	index--
+	console.log(index)
+	
+	changeImg(index)
+}
+
+oScreen.onmouseover = function(){
+	clearInterval(timer)
+}
+oScreen.onmouseout = function(){
+	autoPlay()
+}
+
+
+
+
+</script>
+</html>

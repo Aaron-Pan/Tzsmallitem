@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.tab{
+			border-collapse: collapse;
+			
+		}
+		.nav{
+			height: 50px;
+			background: #558E7D;
+			color: white;
+		}
+		.nav a{
+			color: white;
+			text-decoration: none;/*去掉下划线*/
+			border-right: 1px solid #79B2A1;/*添加右边框*/
+			padding:0 10px; /*添加文字与边框的的填充距*/
+		}
+		.nav .borderNone{
+			border: none; /*去掉最后一个a的边框*/
+		}
+		.aa{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<table class="tab" border="1px">
+	<tr class="nav">
+		<td>美妆护肤</td>
+		<td colspan="2" style="font-size: 12px;">
+			<a href="">腮红</a>
+			<a href="">护发</a>
+			<a href="">唇膏</a>
+			<a href="">眼霜</a>
+			<a href="">精华</a>
+			<a href="">美甲</a>
+			<a href="">沐浴</a>
+			<a href="" class="borderNone">精油</a>
+		</td>
+	</tr>
+	<tr>
+		<td rowspan="2"><img src="../img/img_02.jpg"  class="aa"/></td>
+		<td><img src="../img/img_03.jpg" class="aa"/</td>
+		<td><img src="../img/img_04.jpg" class="aa"/></td>
+	</tr>
+	<tr>
+		<td><img src="../img/img_05.jpg"  class="aa"/></td>
+		<td><img src="../img/img_06.jpg"  class="aa"/></td>
+	</tr>
+	<tr>
+		<td><img src="../img/img_07.jpg"  class="aa"/></td>
+		<td><img src="../img/img_08.jpg"  class="aa"/></td>
+		<td><img src="../img/img_09.jpg"  class="aa"/></td>
+	</tr>
+</table>
+</body>
+</html>

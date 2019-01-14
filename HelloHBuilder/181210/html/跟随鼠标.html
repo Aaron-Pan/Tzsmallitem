@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		html,body{
+			height: 100%;
+			width: 100%;
+		}
+		div{
+			width: 40px;
+			height: 40px;
+			background: url(http://s13.sinaimg.cn/bmiddle/7072eedctd232dac55bac&690)no-repeat center center;
+			background-size:100% 100%; 
+			position: absolute;
+
+		}
+	</style>
+</head>
+<body>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+	<div></div>
+</body>
+<script type="text/javascript">
+	var oDiv = document.querySelectorAll("div");
+	oDiv[0].style.left = 500;
+	oDiv[0].style.top = 500;
+	document.body.onmousemove = function(evt){
+		var e = evt || window.event;
+		oDiv[0].style.left = evt.clientX +"px"
+		oDiv[0].style.top = evt.clientY +"px"
+		for( var i = oDiv.length-1; i > 0 ; i-- ){
+			oDiv[i].style.left = oDiv[i-1].style.left
+			oDiv[i].style.top = oDiv[i-1].style.top
+		}
+
+	}
+</script>
+</html>

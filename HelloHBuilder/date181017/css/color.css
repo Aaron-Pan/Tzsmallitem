@@ -1,0 +1,139 @@
+*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 850px;
+			height: 500px;
+			/*background: #ccc;*/
+			margin: 50px auto;/*水平居中*/
+		}
+		.top{
+			width: 850px;
+			height: 100px;
+			background: #red;
+		}
+		.top1{
+			width: 150px;
+			height: 100px;
+			background: #000000;
+			float: left;
+		}
+		.top2{
+			width: 200px;
+			height: 100px;
+			background: #FA07F7;
+			float: left;
+		}
+		.top3{
+			width: 100px;
+			height: 100px;
+			background: #095EF9;
+			float: left;
+		}
+		.top4{
+			width: 100px;
+			height: 100px;
+			background: #3EFA05;
+			float: left;
+		}
+		.top5{
+			width: 150px;
+			height: 100px;
+			background: #0B1A05;
+			float: left;
+		}
+		.top6{
+			width: 150px;
+			height: 100px;
+			background: #EFEB0D;
+			float: left;
+		}
+		.centre{
+			width: 850px;
+			height: 350px;
+			background: deeppink;
+		}
+		.centre_left{
+			width: 600px;
+			height: 350px;
+			background: yellow;
+			float: left;
+		}
+		.left_top{
+			width: 600px;
+			height: 100px;
+			background: #A3154D;
+			float: left;
+		}
+		.left_bottom{
+			width: 600px;
+			height: 250px;
+			background: aqua;
+			float: left;
+		}
+		.left_a{
+			width: 200px;
+			height: 250px;
+			background: #395C62;
+			float: left;
+		}
+		.left_a1{
+			width: 200px;
+			height: 125px;
+			background: #395C62;
+			float: left;
+		}
+		.left_a2{
+			width: 200px;
+			height: 125px;
+			background: #DCE9E0;
+			float: left;
+		}
+		.left_b{
+			width: 400px;
+			height: 250px;
+			background: white;
+			float: left;
+		}
+		.left_b1{
+			width: 400px;
+			height: 70px;
+			background: #BE06F4;
+			float: left;
+		}
+		.left_b2{
+			width: 400px;
+			height: 120px;
+			background: #0FDBF3;
+			float: left;
+		}
+		.left_b3{
+			width: 400px;
+			height: 60px;
+			background: #DF5912;
+			float: left;
+		}
+		.centre_right{
+			width: 250px;
+			height: 350px;
+			background: #3EFA05;
+			float: left;
+		}
+		.centre_right1{
+			width: 250px;
+			height: 175px;
+			background: #3EFA05;
+			float: left;
+		}
+		.centre_right2{
+			width: 250px;
+			height: 175px;
+			background: #86604D;
+			float: left;
+		}
+		.bottom{
+			width: 850px;
+			height: 50px;
+			background: #938D03;
+		}

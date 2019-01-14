@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.box
+		{
+			width: 800px;
+			height: 100px;
+			margin: 200px auto;
+
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<input type="text" id="val1" name="">
+		<select id="symbol">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+			<option value="%">%</option>
+		</select>
+		<input type="text" id="avl2" name="">
+		=
+		<input type="text" id="res" name="">
+		<button id="jisuan">计算</button>
+	</div>
+
+</body>
+<script type="text/javascript">
+
+	
+	var jieguo=document.getElementById("jisuan");
+	jieguo.onclick=function(){
+		var a=document.getElementById("val1");
+		var aa=Number(a.value);
+		console.log(aa);
+		var f=document.getElementById("symbol");
+		console.log(f);
+		var ff=f.value;
+		console.log(ff);
+		var b=document.getElementById("avl2");
+		console.log(b);
+		var bb=Number(b.value);
+		console.log(bb);
+		var r=0;
+
+		switch(ff){
+			case "+":r=aa+bb;break;
+			case "-":r=aa-bb;break;
+			case "*":r=aa*bb;break;
+			case "/":r=aa/bb;break;
+			case "%":r=aa%bb;break;
+			
+		}
+
+		document.getElementById("res").value=r;
+		}
+	
+
+
+
+
+</script>
+</html>

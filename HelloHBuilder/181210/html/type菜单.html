@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 800px;
+			height: 600px;
+			border: 1px solid black;
+			margin: 20px auto;
+			position: relative;
+		}
+		.item{
+			width: 800px;
+			height: 50px;
+		
+			list-style: none;
+			border-bottom: 1px solid black;
+		}
+		.item li{
+			width: 113px;
+			height: 50px;
+			border-right: 1px solid black;
+			float: left;
+			text-align: center;
+			line-height: 50px;
+		black
+		}
+		.inbox{
+			width: 800px;
+			height: 549px;
+			
+			position: absolute;
+			opacity: 0;
+		}
+		.active{
+			background:black;
+			color: white;
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<ul class="item">
+			<li class="active">新闻</li>
+			<li>音乐</li>
+			<li>电影</li>
+			<li>购物</li>
+			<li>股市</li>
+			<li>趣闻</li>
+			<li style="border-right: none">只有6项</li>
+		</ul>
+		<div class="inbox" style="opacity: 1">
+			<h1>新闻</h1>
+			<h2 style="color: brown">程序员可以修电脑、装系统、卖U盘</h2>
+		<img src="../img/a1.jpg">
+		</div>
+		<div class="inbox">
+		<h1>音乐</h1>
+		<h2 style="color: purple">船新版本的音乐</h2>
+		<img src="../img/a2.jpg">
+		</div>
+		<div class="inbox">
+		<h1>电影</h1>
+		<h2>逐个击破</h2>
+		<img src="../img/a3.jpg">
+		</div>
+		<div class="inbox">
+		<h1>购物</h1>
+		<h2>上好茶叶、何首乌、枸杞、永驻容颜</h2>
+		<img src="../img/a4.jpg">
+		</div>
+		<div class="inbox">
+		<h1>股市</h1>
+		<h2>炒就行了！</h2>
+		<img src="../img/a5.jpg">
+		</div>
+		<div class="inbox">
+		<h1>趣闻</h1>
+		<h2 style="background: red;">只是一个小小的要求，至于吗？</h2>
+		<h2 style="color: red; line-height: 50px;">死！！！</h2>
+		<img src="../img/a7.jpg">
+		</div>
+		<div class="inbox">
+		<h1>没了</h1>
+
+		<img src="../img/a6.jpg">
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var Oli=document.querySelectorAll("li");
+	var inBox=document.querySelectorAll(".inbox");
+	for(let i=0;i<Oli.length;i++)
+	{
+		Oli[i].onclick=function(){
+
+			for(let j=0; j < inBox.length ; j++)
+			{
+				inBox[j].style.opacity="0";
+				Oli[j].className="";
+			}
+			this.className="active";
+			inBox[i].style.opacity="1";
+		}
+	}
+</script>
+</html>

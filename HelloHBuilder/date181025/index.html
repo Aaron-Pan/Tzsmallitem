@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>二级菜单</title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				width:1400px;
+				height: 50px;
+				background: #FFD100;
+				margin-left: 100px;
+			}
+			.logo{
+				width: 100px;
+				height: 50px;
+				float: left;
+				background: #FFD100;
+			}
+			.menu{
+				width: 600px;
+				height: 50px;
+				list-style: none;
+				margin: 0 400px;
+				
+				float: left;
+			}
+			.item{
+				width: 100px;
+				height: 50px;
+				text-align: center;
+				line-height: 50px;
+				float: left;
+			}
+			.item a{
+				display: block;
+				text-decoration: none;
+				font-size: 16px;
+				font-family: "微软雅黑";
+				color: black;
+			}
+			.item a:hover{
+				background: dimgray;
+				color: #FFD100;
+			}
+			.item a:active {
+				
+				font-weight: 800;
+			}
+			.item p{
+				width: 200px;
+				height: 50px;
+				color: black;
+				background: white;
+				display: none;
+			}
+			.item:hover p{
+				display: block;
+			}
+			.item p:hover{
+			
+				background: #FFD100;
+			}
+			.kuang{
+				width: 606px;
+				height: 100px;
+				background: white;
+				display: none;
+			}
+			
+			.ll{
+				width: 60px;
+				height: 30px;
+			    /*border-right-;*/
+				float: left;
+				padding: 10px 20px;
+				border-right: 1px solid #cccccc;
+				border-right-width:thin ;
+				
+				
+			}
+			.ll p{
+				width: 60px;
+				height: 30px;
+				line-height: 30px;
+				border-radius: 5px;
+				
+				
+				
+			}
+			.item:hover div{
+				display: block;
+			}
+			
+		</style>
+		
+	</head>
+	<body style="background: black;">
+		<div class="logo">
+		<img src="img/logo.png" style="width: 100px; height: 50px; float: left;" />
+		</div>
+		<div class="box">
+		
+		<ul class="menu">
+			<li class="item"> <!--/*一级菜单*/-->
+				<a href="">首页</a>
+				<!--二级菜单-->
+				<p>环境</p>
+				<p>地址</p>
+				<p>人员</p>
+				<p>工资</p>
+			</li>
+			<li class="item"><a href="">视频</a>
+				<div class="kuang">
+					<div class="ll"><p>发现</p></div>
+					<div class="ll"><p>哈哈</p></div>
+					<div class="ll"><p>应用</p></div>
+					<div class="ll"><p>天天</p></div>
+					<div class="ll"><p>让人</p></div>
+					<div class="ll"><p>淡淡</p></div>
+					<div class="ll"><p>啊啊</p></div>
+					<div class="ll"><p>认为我</p></div>
+					<div class="ll"><p>add</p></div>
+					<div class="ll"><p>大萨达</p></div>
+					<div class="ll"><p>撒大声地</p></div>
+					<div class="ll"><p>wudi</p></div>
+				</div>
+			</li>
+			<li class="item"><a href="">游戏</a> 
+				<p>绝地求生</p>
+				<p>穿越火线</p>
+				<p>英雄联盟</p>
+				<p>QQ飞车</p></li>
+			<li class="item"><a href="">直播</a> 
+				<p>户外</p>
+				<p>游戏</p>
+				<p>颜值</p>
+				<p>好声音</p></li>
+			<li class="item"><a href="">图片</a>
+				<p>美女</p>
+				<p>豪车</p>
+				<p>风景</p>
+				<p>明星</p>
+			</li>
+			<li class="item"><a href="">百度</a>
+				<p>贴吧</p>
+				<p>新闻</p>
+				<p>地图</p>
+				<p>百科</p>
+			</li>
+		</ul>
+		
+		</div>
+	</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+
+	</style>
+</head>
+<body>
+	<h1>请选择您的爱好：</h1>
+	<input type="checkbox" name="" id="xuan" >全选/全不选
+	<br>
+	<input type="checkbox" name="" class="two">足球
+	<input type="checkbox" name="" class="two">篮球
+	<input type="checkbox" name="" class="two">游泳
+	<input type="checkbox" name="" class="two">唱歌
+	<br>
+	<button id="btn">反选</button>
+</body>
+<script type="text/javascript">
+	var Xuan=document.querySelector("#xuan");
+	var Oinput=document.querySelectorAll(".two");
+	var Obtn=document.querySelector("#btn");
+	console.log(xuan);
+	console.log(Oinput);
+	Xuan.onclick=function(){
+		
+		for(let i=0;i<Oinput.length;i++)
+
+			{
+			if (Xuan.checked) {
+
+				Oinput[i].setAttribute("checked","checked");
+
+			}
+		
+		else{
+			Oinput[i].removeAttribute("checked","checked");
+		}
+			}
+	}
+	Obtn.onclick=function(){
+		for(let j=0;j<Oinput.length;j++)
+		{
+			if (Oinput[j].checked) {
+				Oinput[j].checked=false;
+			}
+			else{
+				Oinput[j].checked=true;
+			}
+			
+			
+			
+		}
+	}
+</script>
+</html>

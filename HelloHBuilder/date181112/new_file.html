@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			.box{
+				height: 500px;
+				width: 500px;
+				margin: 50px auto;
+				background: #FFB819;
+				overflow: hidden;
+			}
+			.box1{
+				width: 500px;
+				height: 400px;
+				background: green;
+				position: absolute;
+				display: block;
+			}
+			.box2{
+				width: 500px;
+				height: 400px;
+				background: red;
+			
+				position: absolute;
+			}
+			#anniu{
+				width: 100px;
+				height: 40px;
+				background: #FF0000;
+				margin: 450px 100px;
+				
+				float: left;
+			}
+			#anniu1{
+				width: 100px;
+				height: 40px;
+				background: #FF0000;
+				margin: 450px 0px;
+				
+				float: left;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="box1"></div>
+			<div class="box2"></div>
+			<button id="anniu">手机号</button>
+			<button id="anniu1">注册</button>
+		</div>
+	</body>
+	<script type="text/javascript">
+		window.onload=function(){
+		var a=document.getElementsByClassName("box1");
+		var b=document.getElementsByClassName("box2");
+		var c=document.getElementById("anniu");
+		c.onClick=function(){
+			a.style.display="block";
+			b.style.display="none";
+		}
+		var d=document.getElementById("anniu1");
+		d.onClick=function(){
+			a.style.display="none";
+			b.style.display="block";
+		}
+		}
+	</script>
+</html>

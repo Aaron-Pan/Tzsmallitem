@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<style type="text/css">
+*{
+margin: 0;
+padding: 0;
+}
+.one{
+border: 1px dashed black;
+width: 150px;
+height: 30px;
+background: #E1E3E0;
+
+}
+.first{
+width: 150px;
+height: 0px;
+overflow: hidden;
+background: yellow;
+}
+.one p{
+font-size: 16px;
+line-height: 30px;
+margin-left: 20px;
+cursor: pointer;
+float: left;
+}
+.first a{
+border-bottom: 1px solid black;
+text-decoration: none;
+display: block;
+text-align: center;
+color: black;
+font-size: 14px;
+line-height: 28px;
+}
+.img{
+float: left;
+
+}
+.active{
+	background: red;
+	color: white;
+}
+</style>
+</head>
+<body bgcolor="black">
+<div class="one">
+<img class="img" src="../img/Z.jpg">
+<p>好朋友</p>	
+</div>
+<div class="first">
+<a>张飞</a>
+<a>韩信</a>
+<a>李白</a>
+<a>杜甫</a>
+<a>李白</a>
+<a>杜甫</a>
+</div>
+<div class="one">
+<img class="img" src="../img/Z.jpg">
+<p>家人</p>	
+</div>
+<div class="first">
+<a>潘安</a>
+<a>潘仁美</a>
+<a>潘玮柏</a>
+<a>潘帅</a>
+<a>潘盼食品</a>
+<a>潘励志</a>
+</div>
+<div class="one">
+<img class="img" src="../img/Z.jpg">
+<p>同学</p>	
+</div>
+<div class="first">
+<a>关羽</a>
+<a>吕布</a>
+<a>貂蝉</a>
+<a>何仙姑</a>
+<a>鬼谷子</a>
+<a>凯</a>
+</div>
+</body>
+<script type="text/javascript">
+var o=document.getElementsByClassName("one");
+var b=document.getElementsByClassName("first");
+var c=document.getElementsByTagName("img");
+// var d=document.getElementsByTagName("a");
+// console.log(d);
+for(var i=0;i<o.length;i++){
+o[i].index=i;
+o[i].onclick=function(){
+var l=this.index;
+
+if (b[l].style.height>"0px") {
+b[l].style.height="0px";
+c[l].style.transform="rotateZ(0deg)"
+}
+else{
+b[l].style.height="168px";
+c[l].style.transform="rotateZ(90deg)"
+}
+}
+
+
+
+
+}
+// var Darr=[];
+// for(var h=0;h<b.length;h++){
+// 	console.log(b);
+// var ali=b[h].document.getElementsByTagName('a');
+// for(var y=0;y<ali.length;y++)
+// {
+// 	Darr.push(ali(y));
+// 	ali[y].onmouseenter=function(){
+// 		alert("s");
+// 	}
+// }
+
+// }
+// console.log(Darr);var aitem=document.getElementsByTagName("a");
+var aitem=document.getElementsByTagName("a");
+// var all=[];
+for(var j=0;j<aitem.length;j++){
+	// all.push(aitem[j]);
+	aitem[j].onmouseenter=function(){
+		for(var k=0;k<aitem.length;k++){
+			if (aitem[k]!=this) {
+				aitem[k].className="";
+			}
+		}
+		if (this.className=="") {
+			this.className="active"
+		}else{
+			this.className="";
+		}
+	}
+}
+</script>
+</html>

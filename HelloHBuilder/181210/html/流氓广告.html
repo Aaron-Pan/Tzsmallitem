@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 600px;
+			height: 380px;
+			display: none;
+			position: absolute;
+			top: 50px;
+			left: 492px; 
+		}
+		.close{
+			width: 50px;
+			height: 30px;
+			background: black;
+			color: white;
+			position: absolute;
+			top: 0;
+			right: 0;
+			cursor: pointer;
+			line-height: 30px;
+		}
+		.time{
+			width: 598px;
+			height: 38px;
+			border: 1px solid black;
+			
+			background: bule;
+		}
+		.close:hover{
+			font-weight: bold;
+			color: red;
+		}
+		.color{
+			width: 0;
+			height: 38px;
+			background: red;
+		}
+	</style>
+</head>
+<body>
+	<h1 align="center" style="margin-top: 50px;">谨防流氓广告！本网站拒绝流氓广告！</h1>
+	<div class="box">
+		<img src="../img/timg.gif" style="width: 600px;
+		height: 340px; display: block;">
+		<div class="close">关闭</div>
+		<div class="time">
+			<p style="left: 48%; line-height: 38px; position: absolute;" id="font"> </p>
+			<div class="color"></div>
+		</div>
+	</div>
+	
+</body>
+<script type="text/javascript">
+	var oBox=document.querySelector(".box");
+	var oColor=document.querySelector(".color");
+	var oFont=document.querySelector("#font");
+	function Out(){
+var tt=setTimeout(function(){
+		oBox.style.display="block";
+		
+        fn();
+
+},5000)}
+Out();
+	function fn(){
+		var b=0;
+		var a=0;
+	var tim=setInterval(function(){
+		
+		
+		
+		b++;
+		a=(b*6);
+		
+		if(b<=100)
+		{
+			oFont.innerHTML=b+"%";
+			oColor.style.width=a+"px";
+		}
+		else{
+			clearInterval(tim)
+			oBox.style.display="none";
+		}
+	},50)
+}
+
+var oClose=document.querySelector(".close");
+oClose.onclick = function(){
+		exin()
+	}
+	function exin(){
+		var res = confirm("你到底买不买？");
+		if( res==true ){
+			oBox.style.display="none";
+			Out();
+		}else{
+			alert("快回去买，蠢猪！！！")
+			exin()
+		}
+	}
+
+
+</script>
+</html>

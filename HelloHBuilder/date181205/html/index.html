@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>表格处理.html</title>
+	
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+
+  </head>
+  
+  <body>
+  	<form id="form1">
+  		<input type="text" id="iname">
+  		<input type="text" id="iemail">
+  		<input type="text" id="iaddress">
+		<input type="button" value="提交" id="submit">
+  	</form>
+
+	<hr>
+
+ 	<table border="1" id="border">
+ 		<tr>
+ 			<td id="name">姓名</td>
+ 			<td id="email">邮箱</td>
+ 			<td id="address">地址</td>
+ 		</tr>
+ 		<tr>
+ 			<td id="name">jzy</td>
+ 			<td id="email">359@qq.com</td>
+ 			<td id="address">重庆</td>
+ 		</tr>
+		<tr>
+ 			<td id="name">jzy</td>
+ 			<td id="email">359@qq.com</td>
+ 			<td id="address">重庆</td>
+ 		</tr>
+ 	</table>
+  </body>
+  <script>
+  	document.getElementById("submit").onclick=function(){
+		//alert("success");
+		//获取输入节点		
+		var nameElement=document.getElementById("iname");
+		var emailElement=document.getElementById("iemail");
+		var addresssElement=document.getElementById("iaddress");
+		
+		//创建表格节点
+		var trNode=document.createElement("tr");
+		var nameNode=document.createElement("td");
+		var emailNode=document.createElement("td");
+		var addressNode=document.createElement("td");
+		
+		//向表格中添加创建的节点及文本内容
+		var borderElement=document.getElementById("border");
+		borderElement.appendChild(trNode);
+		trNode.appendChild(nameNode);
+		trNode.appendChild(emailNode);
+		trNode.appendChild(addressNode);
+		var nametextNode=document.createTextNode(nameElement.value);
+		var emailtextNode=document.createTextNode(emailElement.value);
+		var addresstextNode=document.createTextNode(addresssElement.value);
+		nameNode.appendChild(nametextNode);
+		emailNode.appendChild(emailtextNode);
+		addressNode.appendChild(addresstextNode);
+	
+	}
+  </script>
+</html>

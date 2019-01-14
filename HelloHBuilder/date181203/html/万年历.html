@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 380px;
+			height: 700px;
+			border: 1px solid black;
+			margin: 50px auto;
+			display: flex;
+			justify-content: space-around;
+			align-content: flex-start;
+			flex-wrap: wrap;
+			background: #666666;
+		}
+		.a{
+			margin-top: 10px;
+			width: 120px;
+			height: 120px;
+			background: black;
+			color: white;
+			font-size: 30px;
+			text-align: center;
+			font-weight: bold;
+
+		}
+		#font{
+			color: white;
+		
+			width: 80px;
+			height: 40px;
+			font-size: 30px;
+			font-weight: bold;
+			overflow: hidden;
+			
+		}
+		#shi{
+			color: white;
+			height: 100px;
+			font-size: 20px;
+			
+		
+			width: 360px;
+		}
+		.bottom{
+			margin-top: 30px;
+			margin-left: 20px;
+			width: 360px;
+			height: 150px;
+			
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<div class="a">01月 <p>Jan</p> </div>
+	<div class="a">02月 <p>FEB</p></div>
+	<div class="a">03月 <p>MAR</p></div>
+	<div class="a">04月 <p>APR</p></div>
+	<div class="a">05月 <p>MAY</p></div>
+	<div class="a">06月 <p>JUN</p></div>
+	<div class="a">07月 <p>JUL</p></div>
+	<div class="a">08月 <p>AUG</p></div>
+	<div class="a">09月 <p>SEP</p></div>
+	<div class="a">10月 <p>OCT</p></div>
+	<div class="a">11月 <p>NOV</p></div>
+	<div class="a">12月 <p>DEC</p></div>
+<div class="bottom">
+<p id="font">
+	01月
+</p>
+<p id="shi">
+
+</p>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	var arr=document.getElementsByClassName("a");
+	var b=document.getElementById("font");
+	var h=document.getElementById("shi");
+	for(var i=0;i<arr.length;i++){
+		arr[i].index=i;
+		
+		
+		arr[i].onclick=function(){
+			var f=this.index;
+			switch(f){
+			case 0:h.innerHTML="正月梅花香又香";break;
+			case 1:h.innerHTML="二月春风似剪刀";break;
+			case 2:h.innerHTML="山穷水尽疑无路";break;
+			case 3:h.innerHTML="哀民生之多艰！";break;
+			case 4:h.innerHTML="路漫漫其修远兮";break;
+			case 5:h.innerHTML="吾将上下而求索";break;
+			case 6:h.innerHTML="怨灵修之浩荡兮";break;
+			case 7:h.innerHTML="众女嫉余之蛾眉兮";break;
+			case 8:h.innerHTML="谣诼谓余以善淫";break;
+			case 9:h.innerHTML="一枝红杏出墙来";break;
+			case 10:h.innerHTML="取之于蓝而青于蓝";break;
+			case 11:h.innerHTML="水为之而寒于水";break;
+
+		}
+			for (var j =0; j<arr.length; j++) {
+				if(arr[j]!=this){
+				arr[j].style.color="white";
+				arr[j].style.background="black";
+			}
+			else{
+			this.style.color="red";
+			this.style.background="white";
+			var indx=this.index;
+			b.innerHTML=this.innerHTML;
+}	
+			}
+			
+			
+			
+		}
+	}
+
+</script>
+
+</html>

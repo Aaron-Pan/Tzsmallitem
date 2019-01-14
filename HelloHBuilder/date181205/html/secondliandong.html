@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;;
+		}
+		.box{
+			width: 500px;
+			height: 50px;
+			margin: 100px auto;
+		
+		}
+		.first
+		{
+			width: 100px;
+			height: 30px;
+			float: left;
+			margin-top: 10px;
+			border: 1px solid black;
+		}
+		p{
+			float: left;
+			line-height: 50px;
+		}
+		.two{
+			width: 100px;
+			height: 30px;
+			float: left;
+			margin-top: 10px;
+			border: 1px solid black;
+		}
+		.three{
+			width: 100px;
+			height: 30px;
+			float: left;
+			margin-top: 10px;
+			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>三级联动效果</h1>
+	<div class="box">
+		<p>省份：</p>
+		<select class="first">
+			<option class="one">请选择</option>
+			<option class="one" value="1">北京</option>
+			<option class="one" value="2">贵州</option>
+			<option class="one" value="3">重庆</option>
+		</select>
+		<p>城市：</p>
+		<select class="two">
+			<option>请选择</option>
+		</select>
+		<p>区县：</p>
+		<select class="three">
+			<option>请选择</option>
+		</select>
+
+	</div>
+</body>
+<script type="text/javascript">
+	var oS=document.querySelector(".first");
+	var oOp=document.querySelectorAll(".one");
+	var oSe=document.querySelector(".two");
+	var oTh=document.querySelector(".three");
+	var twoArr=[["昭阳区","海淀区","天安门","故宫"],["贵阳市","遵义市","开阳县","德玛西亚"],["楚米镇","娄山关","甲骨文","工业园"]]
+
+	var thrArr=[[["花花","草草","绿绿","姑姑"],["哈哈","嘿嘿","豆豆","舅舅"],["霍霍","娃娃","一样","哈哈"],["天天","人人","问问","啊啊"]],
+	            [["宝宝","啊啊","方法","鞍山"],["绿绿","看看","慢慢","试试"],["宝宝","啊啊","方法","奶奶"],["啊啊","宝宝","方法","流量"]],
+	            [["也有","奶奶","也也","干爹"],["减肥","积分","无敌","五毒"],["玩儿","王二","爸爸","呜呜"],["梦想","的撒","的撒","奋斗"]]];
+	console.log(thrArr);
+
+	
+	var Arr=[];
+	for(var i=0;i<4;i++){
+		Arr.push(oOp[i].value);
+	}
+		
+
+
+		
+			oS.onchange=function(){
+			
+				oSe.options.length=1;
+				oTh.options.length=1;
+				for (var i = 0; i < 4; i++) {
+					oSe.add(new Option(twoArr[this.value-1][i],i));
+					
+				}
+				var x=this.value-1;
+				oSe.onchange=function(){
+				
+				oTh.options.length=1;
+				for (var i = 0; i < 4; i++) {
+					oTh.add(new Option(thrArr[x][this.value][i]));
+					
+				}
+			}
+	
+			}
+			
+
+
+
+
+</script>
+</html>

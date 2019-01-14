@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title> 
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.box{
+			width: 400px;
+			height: 600px;
+			margin: 10px auto;
+			border: 1px solid black;
+			background: #eee;
+		}
+		.mon{
+			width: 400px;
+			height: 400px;
+			list-style: none;
+		}
+		.item{
+			width: 88px;
+			height: 80px;
+			margin: 10px 20px;
+			float: left;
+			border: 1px solid black;
+			background: black;
+			color: white;
+			text-align: center;
+			line-height: 40px;
+			font-size: 25px;
+			cursor: pointer;
+			box-sizing:border-box;
+		}
+		.info{
+			margin: 20px;
+			padding: 10px;
+			width: 340px;
+			height: 140px;
+			background: #ddd;
+		}
+		.month{
+			font-size: 30px;
+			font-weight: bold;
+		}
+		.tip{
+			line-height: 40px;
+			font-size: 20px;
+		}
+		.active{
+			background: white;
+			color: red;
+			font-weight: bold;
+			border:2px solid black;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<ul class="mon">
+		<li class="item active">
+			<p>1月</p>
+			<p>JAN</p>
+		</li>		
+		<li class="item">
+			<p>2月</p>
+			<p>FEB</p>
+		</li>
+		<li class="item">
+			<p>3月</p>
+			<p>MAR</p>
+		</li>
+		<li class="item">
+			<p>4月</p>
+			<p>APR</p>
+		</li>
+		<li class="item">
+			<p>5月</p>
+			<p>MAY</p>
+		</li>
+		<li class="item">
+			<p>6月</p>
+			<p>JUN</p>
+		</li>
+		<li class="item">
+			<p>7月</p>
+			<p>JUL</p>
+		</li>
+		<li class="item">
+			<p>8月</p>
+			<p>AUG</p>
+		</li>
+		<li class="item">
+			<p>9月</p>
+			<p>SEP</p>
+		</li>
+		<li class="item">
+			<p>10月</p>
+			<p>OCT</p>
+		</li>
+		<li class="item">
+			<p>11月</p>
+			<p>NOV</p>
+		</li>
+		<li class="item">
+			<p>12月</p>
+			<p>DEC</p>
+		</li>
+	</ul>
+	<div class="info">
+		<p class="month">1月</p>
+		<p class="tip">正月梅花香又香</p>
+	</div>
+</div>
+<script type="text/javascript">
+	//将每个月的信息存放到数组里
+	var arr=["正月梅花香又香","二月春风似剪刀","三月桃花香十里","四月蔷薇靠短墙"," 五月石榴红似火","六月荷花满池塘","七月凤仙展奇葩","八月桂花满枝黄","九月菊花初开放","十月芙蓉正上妆","十一月水仙供上案","十二月腊梅雪里藏"]
+	//获取月份并添加点击事件
+	var item=document.querySelectorAll(".item");
+	var month=document.querySelector(".month");
+	var tip=document.querySelector(".tip");
+	for(let i=0;i<item.length;i++){
+		//存下标
+		// item[i].index=i;
+		item[i].onclick=function(){
+			//取下标
+			// var ind=this.index;
+			//清除1月active的样式
+			for(var j=0;j<item.length;j++){
+				item[j].setAttribute("class","item")
+			}
+		//给当前点击的月份添加样式
+		item[i].setAttribute("class","item active");
+		//改变显示区域的月份
+			month.innerHTML=i+1+"月";
+			//改变显示区域的描述内容
+			tip.innerHTML=arr[i];			
+		}
+	}
+</script>
+</body>
+</html>

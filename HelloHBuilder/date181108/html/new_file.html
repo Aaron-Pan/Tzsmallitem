@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minmun-scale=1,maxmun-scale=1,user-scalable=no" />
+		<style>
+			*{
+				margin: 0;
+				padding: 0;
+			}
+			html,body{
+				width: 100%;
+				height: 100%;
+				
+			}
+			.wrap{
+				width: 100%;
+				height: 100%;
+				display: flex;
+				flex-wrap: wrap;
+				flex-direction: column;
+				
+			}
+			.head{
+				width: 100%;
+				height: 44px;
+				background: lawngreen;
+				flex-wrap: wrap;
+				
+			}
+			.center{
+				flex: 1;
+				/*在y轴出现滚动条*/
+				overflow-y:scroll ;
+				display: flex;
+				flex-wrap: wrap;
+				
+			}
+			
+			.jianbian{
+				width: 17%;
+				height: 30px;
+				margin: 7px 0 7px 33%;
+				border-radius: 20px 0 0 20px;
+				background:#9EE7B3;
+				float: left;
+				text-align: center;
+				color: white;
+				font-size: 13px;
+				line-height: 30px;
+			}
+			.jianbian1{
+				width: 17%;
+				height: 30px;
+				margin-top: 7px;
+				border-radius: 0 20px 20px 0;
+				background:#56D67A;
+				float: left;
+				text-align: center;
+				color: white;
+				font-size: 13px;
+				line-height: 30px;
+			}
+			.menu{
+				width: 100%;
+				height: 35px;
+			
+				display: flex;
+				justify-content: space-around;
+				font-size: 13px;
+				color: #111111;
+				line-height: 35px;
+			}
+			.center div{
+				justify-content: space-between;
+				
+				width: 48%;
+				height: 38%;
+				flex-direction: column;
+			}
+			.center div img{
+				width: 100%;
+				height: 70%;
+			}
+			.foot{
+				width: 100%;
+				height: 50px;
+				background: #cccccc;
+				display: flex;
+				justify-content: space-around;
+				font-size: 13px;
+				color: #111111;
+				line-height: 35px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<div class="head">
+				<div class="jianbian">热点
+				</div>
+				<div class="jianbian1">
+					关注
+				</div>
+			</div>
+			
+				<header class="menu">
+					<p>足球现场</p>
+					<p>足球生活</p>
+					<p>足球美女</p>
+				</header>
+				<div class="center">
+				<div style="margin-right: 4%;"><img src="../img/w_02.png" /> <p>小丸子小丸子脚腕子</p> </div>
+				<div><img src="../img/w_04.png" /><p>小丸子小丸子脚腕子</p>  </div>
+				<div style="margin-right: 4%;"><img src="../img/w_07.png" /> <p>小丸子小丸子脚腕子</p> </div>
+				<div><img src="../img/w_09.png" /> <p>小丸子小丸子脚腕子</p> </div>
+				<div style="margin-right: 4%;"><img src="../img/w_07.png" /> <p>小丸子小丸子脚腕子</p> </div>
+				<div><img src="../img/w_09.png" /> <p>小丸子小丸子脚腕子</p> </div>
+			</div>
+			<div class="foot">
+				<p>首页</p>
+				<p>发现</p>
+				<p>拍摄</p>
+				<p>我的</p>
+				<p>退出</p>
+			</div>
+		</div>
+	</body>
+</html>

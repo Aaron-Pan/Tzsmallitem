@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		#box{
+			width: 200px;
+			height: 20px;
+			border: 2px solid black;
+			margin: 200px auto;
+		}
+		#small{
+			width: 200px;
+			height: 20px;
+			background: #666666;
+		
+			animation: move 5s;
+		
+
+		}
+		#dome{
+			
+			font-style: 16px;
+			line-height: 20px;
+			position: absolute;
+			left: 785px;
+	
+		}
+		 @keyframes move{
+        0%{
+        	width: 0px;
+    }
+        100%{
+        	width: 200px;
+			
+    }
+
+                }
+
+	</style>
+</head>
+<body>
+	<div id="box">
+		<div id="small">
+			<p id="dome"></p>
+		</div>
+		
+	</div>
+
+	
+</body>
+<script type="text/javascript">
+
+	var a=0;
+var time=setInterval(function(){
+	a++;
+	document.getElementById("dome").innerHTML=a+"%"
+	if(a==100){
+		clearInterval(time);
+		document.getElementById("dome").innerHTML="100%"
+	}
+},50)
+var f=setTimeout(function(){
+	window.location.reload();
+},10000)
+</script>
+</html>

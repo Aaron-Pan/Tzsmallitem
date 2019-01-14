@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+<button id="btn">点击相加</button>
+<p id="demo"></p>
+</body>
+<script type="text/javascript">
+	//arguments不能动态改变
+	// "use strict"
+	var a=[1,2,3,4,5];
+	var sum=0;
+
+	var btn=document.getElementById("btn");
+	
+	btn.onclick=function(){
+		a.forEach(function(va){
+			sum+=va;
+
+		})
+		document.getElementById("demo").innerHTML=sum;
+	}
+	
+	
+	
+</script>
+</html>

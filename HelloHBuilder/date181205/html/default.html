@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.box{
+			width: 800px;
+			height: 300px;
+			margin: 200px auto;
+			border: 1px solid black;
+		
+
+		}
+		.left{
+			width: 300px;
+			height: 300px;
+			float: left;
+			overflow-y:scroll; 
+			border: 1px solid black;
+			list-style: none;
+		}
+		.left li{
+			
+			margin-top: 5px;
+		}
+		.right{
+			width: 300px;
+			height: 300px;
+			float: right;
+			overflow-y: scroll;
+			border: 1px solid black;
+			list-style: none;
+			text-align: right;
+		}
+		.center{
+			width: 100px;
+			height: 290px;
+			float: left;
+			margin-left: 50px;
+			border: 5px double gold;
+		}
+		button{
+			width: 80px;
+			height: 40px;
+			margin: 5px 10px;
+		}
+	</style>
+</head>
+<body>
+<div class="box">
+	<ul class="left">
+		<li>上海</li>
+		<li>北京</li>
+		<li>贵阳</li>
+		<li>深圳</li>
+		<li>广东</li>
+		<li>开阳</li>
+	</ul>
+	<div class="center">
+		<button> -> </button>
+		<button>>>></button>
+		<button><-</button>
+		<button><<<</button>
+	</div>
+	<ul class="right"></ul>
+</div>
+</body>
+<script type="text/javascript">
+	var Obutton=document.querySelectorAll("button");
+	console.log(Obutton);
+	var OLi=document.querySelectorAll("li");
+	// console.log(Oli);
+
+	var val;
+	for(var i=0;i<OLi.length;i++){
+		OLi.index=i;
+		OLi[i].onclick=function(){
+		
+			for (var j =0; j<OLi.length; j++){
+				if(this!=OLi[j]){
+					this.style.background="#666";
+					OLi[j].style.background="white"
+					
+				}
+				
+			}
+			val=this.innerHTML;
+			
+			Obutton[0].onclick=function(){
+
+				var Oright=document.querySelector(".right");
+				console.log(val);
+				var li=document.createElement("li");
+				Oright.appendChild(li);
+				li.innerHTML=val;
+
+			
+		}
+
+			}
+
+		
+	}
+	
+
+</script>
+</html>

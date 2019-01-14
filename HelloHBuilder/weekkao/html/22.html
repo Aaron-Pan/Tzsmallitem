@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+
+		}
+		.left{
+			width: 100px;
+			height: 50px;
+			float: left;
+			background: #ccc;
+		}
+		.right{
+			width: 100px;
+			height: 50px;
+			float: right;
+			background: #ccc;
+		}
+		.list{
+			width: 1200px;
+			height: 400px;
+			margin: 100px auto;
+			border: 1px solid black;
+			display: flex;
+			justify-content: space-around;
+			
+		}
+		.list span{
+			width: 200px;
+			height: 380px;
+			border: 1px solid black;
+			margin-top: 10px;
+		}
+		.kuang{
+			width: 190px;
+			height: 200px;
+			margin: 5px 5px;
+			border: 1px solid red;
+		}
+		.kuang img{
+			width: 100%;
+			height: 100%;
+		}
+		.font{
+			font-size: 13px;
+			color: #ccc;
+			padding: 10px 5px;
+		}
+		.prices{
+			font-size: 20px;
+			color: red;
+			margin-top: 35px;
+			float:left; 
+		}
+		.buy{
+			text-align: center;
+			line-height: 50px;
+			color: white;
+			font-size: 20px;
+			width: 100px;
+			height: 50px;
+			background: red;
+			float: right;
+			border-radius: 5px;
+			margin-top: 30px;
+		}
+		.shou{
+			width: 100px;
+			height: 30px;
+			color: purple;
+			margin-top: 90px;
+			font-size: 14px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<div style="width: 250px;height: 50px; margin: 0 auto;">
+		<button class="left">按销量</button><button class="right">按价格</button>
+	</div>
+	<div class="list">
+		<span>
+			<div class="kuang"></div>
+			<p class="font">dwadwa</p>
+			<p class="prices">$30</p>
+			<div class="buy">立即购买</div>
+			<p class="shou">销售量</p>
+		</span>
+		<span>
+			<div class="kuang"></div>
+			<p class="font">dwadwa</p>
+			<p class="prices">$30</p>
+			<div class="buy">立即购买</div>
+			<p class="shou">销售量</p>
+
+		</span>
+		<span>
+			<div class="kuang"></div>
+			<p class="font">dwadwa</p>
+			<p class="prices">$30</p>
+			<div class="buy">立即购买</div>
+			<p class="shou">销售量</p>
+		</span>
+		<span>
+			<div class="kuang"></div>
+			<p class="font">dwadwa</p>
+			<p class="prices">$30</p>
+			<div class="buy">立即购买</div>
+			<p class="shou">销售量</p>
+		</span>
+		<span>
+			<div class="kuang"></div>
+			<p class="font">dwadwa</p>
+			<p class="prices">$30</p>
+			<div class="buy">立即购买</div>
+			<p class="shou">销售量</p>
+		</span>
+	</div>
+</body>
+<script type="text/javascript">
+	var json = {
+	shoes:[
+		{
+			"img":"https://f11.baidu.com/it/u=816028878,1419525120&fm=72",
+			"price":"30",
+			"sale":"18",
+			"info":"make change 让改变发生",
+			"title":"李宁"
+		},
+		{
+			"img":"http://img2.imgtn.bdimg.com/it/u=2396993574,2267202984&fm=26&gp=0.jpg",
+			"price":"20",
+			"sale":"10",
+			"info":"keep moving 永不止步",
+			"title":"安踏"
+		}
+		,
+		{
+			"img":"http://img0.imgtn.bdimg.com/it/u=3969999330,3333522502&fm=26&gp=0.jpg",
+			"price":"56",
+			"sale":"34",
+			"info":"I CAN PLAY 我能，无限可能 .",
+			"title":"匹克"
+		}
+		,
+		{
+			"img":"http://img1.imgtn.bdimg.com/it/u=73247904,3321245809&fm=200&gp=0.jpg",
+			"price":"77",
+			"sale":"66",
+			"info":"非一般的感觉 让运动与众不同",
+			"title":"特步"
+		},
+		{
+			"img":"http://img0.imgtn.bdimg.com/it/u=3428580078,3221040424&fm=200&gp=0.jpg",
+			"price":"99",
+			"sale":"23",
+			"info":"I came,I conquared",
+			"title":"乔丹"
+		}
+	]
+}		
+		var oLeft=document.querySelector(".left");
+		var oRight=document.querySelector(".right");
+		var oSpan=document.querySelectorAll("span");
+		console.log(oSpan);
+		
+		var arr=new Array();
+		var brr=new Array();
+		function fn(evt){
+
+			let i=evt;
+		for(i = 0;i<oSpan.length;i++)
+		{	
+			var str=`<div class="kuang"><img src=${json.shoes[i].img}/></div><p class="font">${json.shoes[i].info}</p><p class="prices">${json.shoes[i].price}</p><div class="buy">立即购买</div><p class="shou">销售量：${json.shoes[i].sale}</p>`
+		
+			console.log(str);
+			oSpan[i].innerHTML=str;
+			arr.push(json.shoes[i].price);
+			brr.push(json.shoes[i].sale);
+		}
+	}
+	fn();
+		console.log(arr);
+		oLeft.onclick=function(){
+			for(var j=0; j<arr.length;j++){
+				for(var k=0; k<arr.length-j;k++)
+				{
+					if(arr[k]>arr[k+1])
+					{
+						var temp;
+						temp= arr[k];
+						arr[k]=arr[k+1];
+						arr[k+1]=temp
+						var tim;
+						tim= oSpan[k];
+						oSpan[k]=oSpan[k+1];
+						oSpan[k+1]=tim;
+						
+						
+					}
+					
+				}
+			}
+			console.log(arr);
+		}
+	oRight.onclick=function(){
+			for(var j=0; j<brr.length;j++){
+				for(var k=0; k<brr.length-j;k++)
+				{
+					if(brr[k]>brr[k+1])
+					{
+						var temp;
+						temp= brr[k];
+						brr[k]=brr[k+1];
+						brr[k+1]=temp
+					}
+				}
+			}
+			console.log(brr);
+		}
+
+</script>
+</html>

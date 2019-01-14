@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1 align="center">二级联动效果</h1>
+    省份：
+    <select id="province">
+        <option value="0">--请选择--</option>
+        <option value="1">北京</option>
+        <option value="2">重庆</option>
+        <option value="3">贵州</option>
+    </select>
+    城市：
+    <select id="city">
+        <option value="0">--请选择--</option>
+    </select>
+</body>
+<script type="text/javascript">
+var address = new Array();
+address[1] = ["昌平","通州","朝阳","海淀"];
+address[2] = ["渝中","巴南","南岸","南川"];
+address[3] = ["贵阳","贵定","遵义","凯里"]
+window.onload = function(){
+    var oProvince = document.getElementById("province");
+    var oCity = document.getElementById("city");
+    oProvince.onchange = function(){
+        //每当选择省份就将城市内容先置1
+        oCity.options.length = 1;
+        // 城市动态响应
+        for( var i = 0 ; i < address[oProvince.value].length ; i++ ){
+            oCity.add(new Option(address[oProvince.value][i]))
+        }
+
+    }
+
+}
+</script>
+</html>

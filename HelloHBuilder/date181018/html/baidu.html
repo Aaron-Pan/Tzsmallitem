@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.box{
+				width: 1462px;
+				height: 554px;
+				margin: 0 auto;
+				/*background: red;*/
+				
+			}
+			.right{
+				width: 100%;
+				height: 185px;
+				/*background: #ccc;
+			*/
+			}
+			.zhong{
+				width: 212px;
+				height: 71px;
+				background: white;
+				margin:0px auto;
+				display: block;
+				border: none;
+			}
+			.bottom{
+				width: 645px;
+				height: 35px;
+				border: 1px solid deepskyblue;
+				margin: 39px auto ;
+			}
+			.bottom-left
+			{
+				width: 502px;
+				height: 35px;
+				float: left;
+				border: none;
+			}
+			.img{
+				float: left;
+				margin-top: 1px;
+			}
+			.baiduyixia{
+				float: right;
+				color: white;
+				background: deepskyblue;
+				width: 100px;
+				height: 35px;
+				border: none;
+				cursor: pointer;
+				outline: none;
+			}
+			.baiduyixia:hover{
+				background: skyblue;
+			}
+			.up{
+				width: 72px;
+				height: 50px;
+				float:right;
+			
+			}
+			.vv{
+				width: 53px;
+				height: 25px;
+				line-height: 27px;
+				color: white;
+				background: deepskyblue;
+				margin-top: 10px;
+				font-size: 12px;
+				border: none;
+				font-weight: 700;
+			}
+			.left{
+				width: 380px;
+				height: 50px;
+				background: white;
+				float: right;
+			}
+			.left a{
+				font-weight: 700;
+				font-size: 13px;
+				margin-right: 20px;
+				line-height: 50px;
+				color: black;
+			}
+			.json{
+				margin-top: -1px;
+				display: none;
+			}
+			.json p{
+				width: 500px;
+				height: 30px;
+				background: #cccccc;
+				cursor: pointer;
+				color: #666666;
+			}
+			.json p:hover{
+				background: white;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="box">
+			<div class="right">
+				<div class="up">
+					<input type="submit" value="更多产品" class="vv" />
+				</div>
+				<div class="left">
+					<a href="">新闻</a>
+					<a href="">hao123</a>
+					<a href="">地图</a>
+					<a href="">贴吧</a>
+					<a href="">学术</a>
+					<a href="">登录</a>
+					<a href="">设置</a>
+					
+				</div>
+			</div>
+			<div class="zhong">
+				<img src="../img/QQ图片20181018164154_03.png" />
+			</div>
+			<div class="bottom">
+				<input type="text" class="bottom-left"/>
+				<img src="../img/QQ图片20181018164154_07.gif" />
+
+				<input type="button" value="百度一下" class="baiduyixia" />
+				<div class="json">
+					<p class="one"></p>
+					<p class="two"></p>
+					<p class="three"></p>
+					<p class="four"></p>
+					<p class="five"></p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			var st="";
+			var wd="";
+		function fn(){
+			wd+=($(".bottom-left").val());
+			st=wd;
+			// console.log(wd);
+			$.ajax({
+			url:`https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=${wd}&json=1&p=3&sid=22084_1436_13548_21120_22036_22073&req=2&csor=0&cb=callback`,
+			type:"get",
+			dataType:"jsonp",
+			jsonpCallback:"callback",
+			success:function(res){
+				// var arr=res.s[0];
+
+				// var text1=res.s[0];
+				// if(text1=="undefine")
+				// {
+				// 	text1="";
+				// }
+				// var text2=res.s[1];
+				// var text3=res.s[2];
+				// var text4=res.s[3];
+				// var text5=res.s[4];
+				
+				
+				$(".json")[0].style.display="block";
+				$(".one").text(`${res.s[0]}`);
+				$(".two").html(`${res.s[1]}`);
+				$(".three").html(`${res.s[2]}`);
+				$(".four").html(`${res.s[3]}`);
+				$(".five").html(`${res.s[4]}`);
+			
+		}
+
+		})
+			wd="";
+		}
+		var wd="";
+		$(".baiduyixia").click(function(){
+			fn();
+		})
+		$(".bottom-left").focus(function(){
+			$(".json")[0].style.display="block";
+		})
+		$(".bottom-left").blur(function(){
+			$(".json")[0].style.display="none";
+		})
+	
+		$("p").click(function(){
+			$(".json")[0].style.display="none";
+		})
+		$(".bottom-left").keydown(function(evt){
+				var e=evt|window.event;
+				
+				fn();
+				// if(e.keyCode==13)
+				// {
+				// 	alert("a");
+				// }
+	
+	})
+
+	})
+	</script>
+</html>
